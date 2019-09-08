@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="shortcut icon" href="./assets/demo/img/favicon.png">
+    <title>Markeatpeak</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/v4-shims.min.css">
+    <!-- Scrollbar -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/select2/select2.min.css">
+    <!-- Toasters -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/toastr/toastr.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/datatables/datatables.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/demo/css/view_d3js.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<!-- <body class="sidebar-minimize"> -->
+<body>
+    <div class="page-container">
+        <div id="mainSidebar" class="sidebar-main">
+            <div class="sidebar-header">
+                <a class="sidebar-brand" href="#">
+                    <img src="./assets/demo/img/logo.png"><span class="text-blue">Market</span><span>Peak</span>
+                </a>
+            </div>
+            <ul class="navigation">
+                <li class="navigation-header">
+                    <span>Pages</span>
+                </li>
+                <li class="active">
+                    <a href="/dashboard.php">
+                        <i class="fal fa-tachometer"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-list-ul"></i>
+                        <span>ICO projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-dollar-sign"></i>
+                        <span>Investments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-chart-bar"></i>
+                        <span>Marketing</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-chart-line"></i>
+                                <span>Promotion</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-folder-minus"></i>
+                                <span>Materials</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-file-invoice-dollar"></i>
+                                <span>Compensation plan</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-browser"></i>
+                                <span>Menu level 2</span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-internet-explorer"></i>
+                                        <span>IExplorer</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-chrome"></i>
+                                        <span>Google Chrome</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-firefox"></i>
+                                        <span>Mozilla Firefox</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-share-alt"></i>
+                        <span>Network</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-calculator-alt"></i>
+                        <span>Finance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-envelope-open"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-shopping-cart"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-newspaper"></i>
+                        <span>News</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-headset"></i>
+                        <span>Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-cog"></i>
+                        <span>Admin panel</span>
+                    </a>
+                </li>
+            </ul>
+            <span class="close-sidebar-main toggle-sidebar-main_js"></span>
+        </div>
+        <div class="content-wrapper">
+            <? include('./layouts/header.php'); ?>
+            <div class="main-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="panel">
+                                <div class="panel-body">
+                                    <div class="graph-title">
+                                        <h5 class="text-weight-medium">General view of the structure</h5>
+                                        <div class="fx-grow"></div>
+                                        <div class="graph-controls">
+                                            <div class="pill-controls">
+                                                <div class="menu-pill btn-primary">
+                                                    <img src="./assets/img/icons/menu.png">
+                                                </div>
+                                                <div class="graph-pill active">
+                                                    <img src="./assets/img/icons/tree.png">
+                                                </div>
+                                            </div>
+                                            <span class="btn-primary"><i class="far fa-expand-alt"></i></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div style="width: 100%; height: 600px; position: relative;"><!-- Ненужный контейнер -->
+                                    </div>
+                                    <div class="tooltip-user-block custom-scroll">
+                                        <button class="btn-close"><i class="fal fa-times"></i></button>
+                                        <div class="user-data">
+                                            <img src="./assets/demo/img/avatar-2.jpg">
+                                            <div>
+                                                <p class="user-fio">Константинов Константин</p>
+                                                <p class="user-nikname">kostyan_login</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Ранг</label>
+                                            <div class="col-sm-8 col-form-label align-self-center">Партнер</div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">ID</label>
+                                            <div class="col-sm-8 col-form-label align-self-center">789456123</div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Размер команды</label>
+                                            <div class="col-sm-8 col-form-label align-self-center">51</div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Телефон</label>
+                                            <div class="col-sm-8 col-form-label align-self-center has-copy"><span>+38 (098) 765-43-21</span><a href="javascript:void(0);" class="btn btn-primary"><i class="fal fa-copy"></i></a></div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Skype</label>
+                                            <div class="col-sm-8 col-form-label align-self-center has-copy"><span>user_login</span><a href="javascript:void(0);" class="btn btn-primary"><i class="fal fa-copy"></i></a></div>
+                                        </div>
+                                        <p class="tooltip-user-title">Спонсор</p>
+                                        <div class="user-data">
+                                            <img src="./assets/demo/img/avatar-2.jpg">
+                                            <div>
+                                                <p class="user-fio">Константинов Константин</p>
+                                                <p class="user-nikname">kostyan_login</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Ранг</label>
+                                            <div class="col-sm-8 col-form-label align-self-center">Партнер</div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">ID</label>
+                                            <div class="col-sm-8 col-form-label align-self-center">789456123</div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Размер команды</label>
+                                            <div class="col-sm-8 col-form-label align-self-center">51</div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Телефон</label>
+                                            <div class="col-sm-8 col-form-label align-self-center has-copy"><span>+38 (098) 765-43-21</span><a href="javascript:void(0);" class="btn btn-primary"><i class="fal fa-copy"></i></a></div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label">Skype</label>
+                                            <div class="col-sm-8 col-form-label align-self-center has-copy"><span>user_login</span><a href="javascript:void(0);" class="btn btn-primary"><i class="fal fa-copy"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="panel panel-primary mb-10">
+                                <div class="panel-body legs">
+                                    <div class="leg-div">
+                                        <div class="leg-icon">
+                                            <img src="./assets/img/icons/left_leg.png">
+                                        </div>
+                                        <div class="leg-content">
+                                            <div class="leg-number">
+                                                <h4>750</h4>
+                                            </div>
+                                            <div class="leg-description">points in left leg</div>
+                                        </div>
+                                    </div>
+                                    <div class="leg-div">
+                                        <div class="leg-icon">
+                                            <img src="./assets/img/icons/right_leg.png">
+                                        </div>
+                                        <div class="leg-content">
+                                            <div class="leg-number">
+                                                <h4>1250</h4>
+                                            </div>
+                                            <div class="leg-description">points in right leg</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="accordion" id="accordionExample">
+                                  <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <button class="btn btn-link btn-block sidebar-act" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                          Binar fill settings
+                                        </button>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                      <div class="card-body">
+                                        <label class="btn-primary"><span class="larger-text"><i class="far fa-circle"></i></span> Balanced</label><br>
+                                        <label class="btn-primary"><span class="larger-text"><i class="far fa-dot-circle"></i></span> In the left branch</label><br>
+                                        <label class="btn-primary"><span class="larger-text"><i class="far fa-circle"></i></span> In the right branch</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <button class="btn btn-link btn-block collapsed sidebar-act" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                          Search by user
+                                        </button>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                      <div class="card-body">
+                                        <form class="login-form">
+                                            <div class="form-group row">
+                                                <div class="col-12 relative">
+                                                    <input type="text" class="form-control" value="Vladim">
+                                                    <label class="above-label">Login</label>
+                                                    <a href="#" class="btn btn-success apply-link"><i class="fal fa-check"></i>Apply</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <button class="btn btn-link btn-block collapsed sidebar-act" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                          User to move
+                                        </button>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                      <div class="card-body">
+                                        <form class="login-form">
+                                            <div class="form-group row">
+                                                <div class="col-12">
+                                                    <input type="text" class="form-control" value="Vladim">
+                                                    <label class="above-label">Login</label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="mb-10"><span class="btn-primary"><span class="larger-text"><i class="fal fa-toggle-on"></i></span> </span><span class="text-weight-medium">Move with structure</span></div>
+                                        <h6 class="text-weight-medium">Move to cell</h6>
+                                        <input type="text" class="form-control" value="" placeholder="Cell number">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card">
+                                    <div class="card-header" id="headingFour">
+                                        <button class="btn btn-link btn-block collapsed sidebar-act" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                          Depth of structure mapping
+                                        </button>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                      <div class="card-body">
+                                        <div class="form-group row">
+                                            <div class="col-sm-12 c-grow">
+                                                <select class="form-control select2">
+                                                    <option>4 levels of</option>
+                                                    <option>7 levels of</option>
+                                                    <option>15 levels of</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <span>Created for Marketpeak - <a href="#" class="text-weight-regular">Zendo.cloud</a></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- Basic js -->
+    <script src="./assets/js/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- mCustomScrollbar -->
+    <script src="./assets/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Select2 -->
+    <script src="./assets/plugins/select2/select2.min.js"></script>
+    <!-- Toasters -->
+    <script src="./assets/plugins/toastr/toastr.min.js"></script>
+    <!-- DataTables -->
+    <script src="./assets/plugins/datatables/datatables.min.js"></script>
+    <!-- Main js -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

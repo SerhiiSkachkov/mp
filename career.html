@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="shortcut icon" href="./assets/demo/img/favicon.png">
+    <title>Markeatpeak</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/v4-shims.min.css">
+    <!-- Scrollbar -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/select2/select2.min.css">
+    <!-- Toasters -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/toastr/toastr.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/datatables/datatables.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/demo/css/view_d3js.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<!-- <body class="sidebar-minimize"> -->
+<body>
+    <div class="page-container">
+        <div id="mainSidebar" class="sidebar-main">
+            <div class="sidebar-header">
+                <a class="sidebar-brand" href="#">
+                    <img src="./assets/demo/img/logo.png"><span class="text-blue">Market</span><span>Peak</span>
+                </a>
+            </div>
+            <ul class="navigation">
+                <li class="navigation-header">
+                    <span>Pages</span>
+                </li>
+                <li class="active">
+                    <a href="/dashboard.php">
+                        <i class="fal fa-tachometer"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-list-ul"></i>
+                        <span>ICO projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-dollar-sign"></i>
+                        <span>Investments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-chart-bar"></i>
+                        <span>Marketing</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-chart-line"></i>
+                                <span>Promotion</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-folder-minus"></i>
+                                <span>Materials</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-file-invoice-dollar"></i>
+                                <span>Compensation plan</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-browser"></i>
+                                <span>Menu level 2</span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-internet-explorer"></i>
+                                        <span>IExplorer</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-chrome"></i>
+                                        <span>Google Chrome</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-firefox"></i>
+                                        <span>Mozilla Firefox</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-share-alt"></i>
+                        <span>Network</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-calculator-alt"></i>
+                        <span>Finance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-envelope-open"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-shopping-cart"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-newspaper"></i>
+                        <span>News</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-headset"></i>
+                        <span>Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-cog"></i>
+                        <span>Admin panel</span>
+                    </a>
+                </li>
+            </ul>
+            <span class="close-sidebar-main toggle-sidebar-main_js"></span>
+        </div>
+        <div class="content-wrapper">
+            <? include('./layouts/header.php'); ?>
+            <div class="main-wrapper">
+                <div class="container-fluid">
+                    <div class="hover-panel-title">
+                        <h5 class="text-weight-medium">Career</h5>
+                        <div class="fx-grow"></div>
+                        <div class="">
+                            <h5 class="">
+                                <div class="dropdown dropdown-hedding-menu dropdown-rank">
+                                    <a href="#" class="btn btn-primary text-weight-medium" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fal fa-list-ul"></i>Ranks</a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <div class="hover-panel-title">
+                                            <h6 class="text-weight-semibold">Rank</h6>
+                                            <div class="fx-grow"></div>
+                                            <h6 class="text-weight-semibold">In my 1st level</h6>
+                                        </div>
+                                        <div class="vertical-bars">
+                                            <div>
+                                                <div class="hover-panel-title text-weight-light">
+                                                    Consultant
+                                                    <div class="fx-grow"></div>
+                                                    1
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="hover-panel-title text-weight-light">
+                                                    Senior Consultant
+                                                    <div class="fx-grow"></div>
+                                                    2
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="hover-panel-title text-weight-light">
+                                                    Manager
+                                                    <div class="fx-grow"></div>
+                                                    3
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="hover-panel-title text-weight-light">
+                                                    Senior Manager
+                                                    <div class="fx-grow"></div>
+                                                    4
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="hover-panel-title text-weight-light">
+                                                    Director
+                                                    <div class="fx-grow"></div>
+                                                    5
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="hover-panel-title text-weight-light">
+                                                    Regional director
+                                                    <div class="fx-grow"></div>
+                                                    6
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="hover-panel-title text-weight-light">
+                                                    National Director
+                                                    <div class="fx-grow"></div>
+                                                    7
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="hover-panel-title text-weight-light">
+                                                    President Gold
+                                                    <div class="fx-grow"></div>
+                                                    8
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="hover-panel-title text-weight-light">
+                                                    President Diamond
+                                                    <div class="fx-grow"></div>
+                                                    9
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="hover-panel-title text-weight-light">
+                                                    President Black Diamond
+                                                    <div class="fx-grow"></div>
+                                                    10
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h5>
+                        </div>
+                    </div>
+                    <hr>
+                    <br>
+                    <div class="panel">
+                        <div class="panel-body no-pad">
+                            <div class="split-title">
+                                <div class="panel-split-title color-level-blue">
+                                    <div>Current rank</div>
+                                </div>
+                                <div class="fx-grow pd-20">
+                                    <div class="row message-controls">
+                                        <div class="col-sm-3 panel-big-title">
+                                            <h1 class="btn-primary">
+                                                <span class="title-icon">
+                                                    <i class="fal fa-gem"></i>
+                                                </span>
+                                                MANAGER
+                                            </h1>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="point-counter">
+                                                <div class="points-amt">
+                                                    <h1>0</h1>
+                                                </div>
+                                                <br>
+                                                cv points this week
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="point-counter">
+                                                <div class="points-amt">
+                                                    <h1>0</h1>
+                                                </div>
+                                                <br>
+                                                total cv points
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="point-counter">
+                                                <div class="time-amt">
+                                                    <h1>18 : 12 : 34 : 42</h1>
+                                                </div>
+                                                <br>
+                                                to end of the period
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-body no-pad">
+                            <div class="split-title">
+                                <div class="panel-split-title color-level-gray">
+                                    <div><i class="fal fa-question-circle"></i> Next rank</div>
+                                </div>
+                                <div class="fx-grow pd-20">
+                                    <div class="row message-controls">
+                                        <div class="col-sm-3 panel-big-title">
+                                            <h1 class="btn-secondary">
+                                                <span class="title-icon">
+                                                    <i class="fal fa-star"></i>
+                                                </span>
+                                                SENIOR MANAGER
+                                            </h1>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="legend-container">
+                                                <label class="btn-primary">1 way to senior manager</label>
+                                                <div class="progress-title">
+                                                    <div class="rank-title">Rank</div>
+                                                    <div class="fx-grow out-of">
+                                                        <h5 class="text-weight-medium">1 of Manager</h5>
+                                                        <div class="fx-grow"></div>
+                                                        <h5 class="text-weight-medium">2 of Manager</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-bar">
+                                                    <div class="progress-bar-progress color-level-blue" style="width:75%;"></div>
+                                                </div>
+                                                <div class="progress-title">
+                                                    <div class="rank-title">Rank</div>
+                                                    <div class="fx-grow out-of">
+                                                        <h5 class="text-weight-medium">49 247</h5>
+                                                        <div class="fx-grow"></div>
+                                                        <h5 class="text-weight-medium">300 000</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-bar">
+                                                    <div class="progress-bar-progress color-level-blue" style="width:25%;"></div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="legend-container">
+                                                <label class="btn-success">2 way to senior manager</label>
+                                                <div class="progress-title">
+                                                    <div class="rank-title">Rank</div>
+                                                    <div class="fx-grow out-of">
+                                                        <h5 class="text-weight-medium">3 of Senior consultant</h5>
+                                                        <div class="fx-grow"></div>
+                                                        <h5 class="text-weight-medium">4 of Senior consultant</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-bar">
+                                                    <div class="progress-bar-progress color-level-green" style="width:75%;"></div>
+                                                </div>
+                                                <div class="progress-title">
+                                                    <div class="rank-title">Point</div>
+                                                    <div class="fx-grow out-of">
+                                                        <h5 class="text-weight-medium">13 247</h5>
+                                                        <div class="fx-grow"></div>
+                                                        <h5 class="text-weight-medium">150 000</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-bar">
+                                                    <div class="progress-bar-progress color-level-green" style="width:25%;"></div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="legend-container">
+                                                <label class="btn-warning">3 way to senior manager</label>
+                                                <div class="progress-title">
+                                                    <div class="rank-title">Rank</div>
+                                                    <div class="fx-grow out-of">
+                                                        <h5 class="text-weight-medium">1 of Consultant</h5>
+                                                        <div class="fx-grow"></div>
+                                                        <h5 class="text-weight-medium">6 of Consultant</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-bar">
+                                                    <div class="progress-bar-progress color-level-yellow" style="width:75%;"></div>
+                                                </div>
+                                                <div class="progress-title">
+                                                    <div class="rank-title">Point</div>
+                                                    <div class="fx-grow out-of">
+                                                        <h5 class="text-weight-medium">5 327</h5>
+                                                        <div class="fx-grow"></div>
+                                                        <h5 class="text-weight-medium">150 000</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-bar">
+                                                    <div class="progress-bar-progress color-level-yellow" style="width:25%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel d-none">
+                        <div class="panel-body">
+                            <h5 class="text-weight-medium">Tree by personal invitation</h5>
+                            <hr>
+                            <div class="table-menu">
+                                <div class="round-count">22</div>
+                                <span>- total users in the structure</span>
+                                <div class="fx-grow"></div>
+                                <div class="message-controls table-controls">
+                                    <div class="g-dropdown">
+                                        <h5 class="text-weight-medium"><a href="" class="d-drop-toggle"><i class="fal fa-list-ul"></i> Legend</a></h5>
+                                        <div class="g-dropdown-body">
+                                            <div class="vertical-bars legend-menu">
+                                                <div>
+                                                    <span class="color-level color-level-blue"></span><a href="#"> 1 level </a>
+                                                </div>
+                                                <div>
+                                                    <span class="color-level color-level-green"></span><a href="#"> 2 level </a>
+                                                </div>
+                                                <div>
+                                                    <span class="color-level color-level-red"></span><a href="#"> 3 level </a>
+                                                </div>
+                                                <div>
+                                                    <span class="color-level color-level-yellow"></span><a href="#"> 4 level </a>
+                                                </div>
+                                                <div>
+                                                    <span class="color-level color-level-purple"></span><a href="#"> 5 level </a>
+                                                </div>
+                                                <div>
+                                                    <span class="color-level color-level-ltblue"></span><a href="#"> 6 level </a>
+                                                </div>
+                                                <div>
+                                                    <span class="color-level color-level-pink"></span><a href="#"> 7 level </a>
+                                                </div>
+                                                <div>
+                                                    <span class="color-level color-level-yellow"></span><a href="#"> 8 level </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="g-dropdown">
+                                        <h5 class="text-weight-medium"><a href="" class="d-drop-toggle"><i class="fal fa-filter"></i> Filter</a></h5>
+                                        <div class="g-dropdown-body filter-box">
+                                            <form class="login-form">
+                                                <div class="form-group row">
+                                                    <div class="col-12 white-login normalize-input">
+                                                        <input type="text" class="form-control highlight-input" placeholder="Login">
+                                                        <label class="above-label">Login</label>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <form class="login-form">
+                                                <div class="form-group row">
+                                                    <div class="col-12 white-login normalize-input">
+                                                        <input type="text" class="form-control highlight-input" placeholder="Full Name">
+                                                        <label class="above-label">Full name</label>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <form class="login-form">
+                                                <div class="form-group row">
+                                                    <div class="col-12 white-login normalize-input">
+                                                        <input type="text" class="form-control highlight-input" placeholder="E-mail">
+                                                        <label class="above-label">E-mail</label>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="row message-controls">
+                                                <div class="col-sm-6">
+                                                    <a href="#" class="btn btn-success"><i class="fal fa-check"></i></i>Apply</a>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <a href="#" class="btn btn-danger"><i class="fal fa-redo"></i>Reset</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="tree-table">
+                                <tr>
+                                    <th>Login</th>
+                                    <th>Full name</th>
+                                    <th>Rank</th>
+                                    <th>Level</th>
+                                    <th>Sponsor's<br>login</th>
+                                    <th>Sponsor's<br>full name</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Positions<br>in the matrix</th>
+                                </tr>
+                                <tr>
+                                    <td class="dropdown-td" id="sample-dropdown"><div class="left-marker"></div>exampleloginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>Missing</td>
+                                    <td>10</td>
+                                    <td>loginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>+41 (31) 310 99 99</td>
+                                    <td>exampleloginname@gmail.com</td>
+                                    <td>Missing</td>
+                                </tr>
+                                <tr class="table-down tr-left-blue" data-parent="#sample-dropdown">
+                                    <td class="pl-30 dropdown-td" id="sample-dropdown2"><div class="left-marker"></div>exampleloginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>Missing</td>
+                                    <td>10</td>
+                                    <td>loginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>+41 (31) 310 99 99</td>
+                                    <td>exampleloginname@gmail.com</td>
+                                    <td>Missing</td>
+                                </tr>
+                                <tr class="table-down tr-left-green" data-parent="#sample-dropdown2">
+                                    <td class="pl-40 dropdown-td" id="sample-dropdown3"><div class="left-marker"></div>exampleloginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>Missing</td>
+                                    <td>10</td>
+                                    <td>loginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>+41 (31) 310 99 99</td>
+                                    <td>exampleloginname@gmail.com</td>
+                                    <td>Missing</td>
+                                </tr>
+                                <tr class="table-down tr-left-red" data-parent="#sample-dropdown3">
+                                    <td class="pl-50 dropdown-td active clear-before"><div class="left-marker"></div>exampleloginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>Missing</td>
+                                    <td>10</td>
+                                    <td>loginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>+41 (31) 310 99 99</td>
+                                    <td>exampleloginname@gmail.com</td>
+                                    <td>Missing</td>
+                                </tr>
+                                <tr>
+                                    <td class="dropdown-td" id="sample-dropdown4"><div class="left-marker"></div>exampleloginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>Missing</td>
+                                    <td>10</td>
+                                    <td>loginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>+41 (31) 310 99 99</td>
+                                    <td>exampleloginname@gmail.com</td>
+                                    <td>Missing</td>
+                                </tr>
+                                <tr class="table-down tr-left-blue" data-parent="#sample-dropdown4">
+                                    <td class="pl-30 dropdown-td" id="sample-dropdown5"><div class="left-marker"></div>exampleloginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>Missing</td>
+                                    <td>10</td>
+                                    <td>loginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>+41 (31) 310 99 99</td>
+                                    <td>exampleloginname@gmail.com</td>
+                                    <td>Missing</td>
+                                </tr>
+                                <tr class="table-down tr-left-green" data-parent="#sample-dropdown5">
+                                    <td class="pl-40 dropdown-td" id="sample-dropdown6"><div class="left-marker"></div>exampleloginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>Missing</td>
+                                    <td>10</td>
+                                    <td>loginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>+41 (31) 310 99 99</td>
+                                    <td>exampleloginname@gmail.com</td>
+                                    <td>Missing</td>
+                                </tr>
+                                <tr class="table-down tr-left-red" data-parent="#sample-dropdown6">
+                                    <td class="pl-50 dropdown-td active clear-before"><div class="left-marker"></div>exampleloginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>Missing</td>
+                                    <td>10</td>
+                                    <td>loginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>+41 (31) 310 99 99</td>
+                                    <td>exampleloginname@gmail.com</td>
+                                    <td>Missing</td>
+                                </tr>
+                                <tr>
+                                    <td class="dropdown-td" id="sample-dropdown7"><div class="left-marker"></div>exampleloginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>Missing</td>
+                                    <td>10</td>
+                                    <td>loginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>+41 (31) 310 99 99</td>
+                                    <td>exampleloginname@gmail.com</td>
+                                    <td>Missing</td>
+                                </tr>
+                                <tr class="table-down tr-left-blue" data-parent="#sample-dropdown7">
+                                    <td class="pl-30 dropdown-td" id="sample-dropdown8"><div class="left-marker"></div>exampleloginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>Missing</td>
+                                    <td>10</td>
+                                    <td>loginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>+41 (31) 310 99 99</td>
+                                    <td>exampleloginname@gmail.com</td>
+                                    <td>Missing</td>
+                                </tr>
+                                <tr class="table-down tr-left-green" data-parent="#sample-dropdown8">
+                                    <td class="pl-40 dropdown-td" id="sample-dropdown9"><div class="left-marker"></div>exampleloginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>Missing</td>
+                                    <td>10</td>
+                                    <td>loginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>+41 (31) 310 99 99</td>
+                                    <td>exampleloginname@gmail.com</td>
+                                    <td>Missing</td>
+                                </tr>
+                                <tr class="table-down tr-left-red" data-parent="#sample-dropdown9">
+                                    <td class="pl-50 dropdown-td active clear-before"><div class="left-marker"></div>exampleloginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>Missing</td>
+                                    <td>10</td>
+                                    <td>loginname</td>
+                                    <td>Konstantinov Grigory</td>
+                                    <td>+41 (31) 310 99 99</td>
+                                    <td>exampleloginname@gmail.com</td>
+                                    <td>Missing</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <span>Created for Marketpeak - <a href="#" class="text-weight-regular">Zendo.cloud</a></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+        <!-- Basic js -->
+    <script src="./assets/js/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- mCustomScrollbar -->
+    <script src="./assets/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Select2 -->
+    <script src="./assets/plugins/select2/select2.min.js"></script>
+    <!-- Toasters -->
+    <script src="./assets/plugins/toastr/toastr.min.js"></script>
+    <!-- DataTables -->
+    <script src="./assets/plugins/datatables/datatables.min.js"></script>
+    <!-- Main js -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

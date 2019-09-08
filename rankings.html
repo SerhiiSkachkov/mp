@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="shortcut icon" href="./assets/demo/img/favicon.png">
+    <title>Markeatpeak - <?=$pageTitle;?></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/v4-shims.min.css">
+    <!-- Scrollbar -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/select2/select2.min.css">
+    <!-- Toasters -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/toastr/toastr.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/datatables/datatables.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/demo/css/view_d3js.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<!-- <body class="sidebar-minimize"> -->
+<body>
+    <div class="page-container">
+        <div id="mainSidebar" class="sidebar-main">
+            <div class="sidebar-header">
+                <a class="sidebar-brand" href="#">
+                    <img src="./assets/demo/img/logo.png"><span class="text-blue">Market</span><span>Peak</span>
+                </a>
+            </div>
+            <ul class="navigation">
+                <li class="navigation-header">
+                    <span>Pages</span>
+                </li>
+                <li class="active">
+                    <a href="/dashboard.php">
+                        <i class="fal fa-tachometer"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-list-ul"></i>
+                        <span>ICO projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-dollar-sign"></i>
+                        <span>Investments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-chart-bar"></i>
+                        <span>Marketing</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-chart-line"></i>
+                                <span>Promotion</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-folder-minus"></i>
+                                <span>Materials</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-file-invoice-dollar"></i>
+                                <span>Compensation plan</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-browser"></i>
+                                <span>Menu level 2</span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-internet-explorer"></i>
+                                        <span>IExplorer</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-chrome"></i>
+                                        <span>Google Chrome</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-firefox"></i>
+                                        <span>Mozilla Firefox</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-share-alt"></i>
+                        <span>Network</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-calculator-alt"></i>
+                        <span>Finance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-envelope-open"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-shopping-cart"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-newspaper"></i>
+                        <span>News</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-headset"></i>
+                        <span>Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-cog"></i>
+                        <span>Admin panel</span>
+                    </a>
+                </li>
+            </ul>
+            <span class="close-sidebar-main toggle-sidebar-main_js"></span>
+        </div>
+        <div class="content-wrapper">
+            <header class="page-header">
+                <div class="left-side">
+                    <a class="toggle-sidebar-main toggle-sidebar-main_js"><span></span></a>
+                    <ul class="breadcrumbs">
+                        <li><a href="#">Main</a></li>
+                        <li><?=$pageTitle;?></li>
+                    </ul>
+                </div>
+                <div class="right-side">
+                    <div class="referal-link">
+                        <input type="text" value="http://admin.marketpeak">
+                        <a id="linkReferalButton" href="#"><i class="fal fa-copy"></i></a>
+                    </div>
+                    <div class="dropdown lang-menu">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            EN
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">
+                                <img src="./assets/demo/img/ru.jpg" alt="Russia">
+                                Russian
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./assets/demo/img/en.jpg" alt="Russia">
+                                English
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./assets/demo/img/sp.jpg" alt="Russia">
+                                Spanish
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown user-menu">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Konstantin
+                            <i class="fas fa-caret-down"></i>
+                            <img src="./assets/demo/img/user.jpg" class="avatar-user">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">
+                                <i class="fal fa-user"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fal fa-sign-out"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="panel panel-fat">
+                                <div class="panel-body">
+                                    <div class="table-widget-controls d-sm-flex justify-content-lg-end pb20">
+                                        <div class="table-widget-controls-item mr20">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" class="custom-control-input change-matrix-filling" id="radio-country1" name="radio-country" checked="">
+                                                <label class="custom-control-label" for="radio-country1">TOP 20 of the <span class="text-weight-semibold">week</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="table-widget-controls-item mr20">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" class="custom-control-input change-matrix-filling" id="radio-country2" name="radio-country">
+                                                <label class="custom-control-label" for="radio-country2">TOP 20 of the <span class="text-weight-semibold">month</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="table-widget-controls-item">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" class="custom-control-input change-matrix-filling" id="radio-country3" name="radio-country">
+                                                <label class="custom-control-label" for="radio-country3">TOP 20 of the <span class="text-weight-semibold">lifetime</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive mb30">
+                                        <table class="table">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Rank</th>
+                                                    <th scope="col">Username</th>
+                                                    <th class="text-center" scope="col">Country</th>
+                                                    <th class="text-right" scope="col">Turnover in CV</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Director</td>
+                                                    <td>loginesersexample</td>
+                                                    <td class="text-center" ><img class="table-country" src="./assets/demo/img/en.jpg"></td>
+                                                    <td class="text-right">500 000</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Senior manager</td>
+                                                    <td>loginesersexample</td>
+                                                    <td class="text-center" ><img class="table-country" src="./assets/demo/img/en.jpg"></td>
+                                                    <td class="text-right">500 000</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Director</td>
+                                                    <td>loginesersexample</td>
+                                                    <td class="text-center" ><img class="table-country" src="./assets/demo/img/en.jpg"></td>
+                                                    <td class="text-right">500 000</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Senior manager</td>
+                                                    <td>loginesersexample</td>
+                                                    <td class="text-center" ><img class="table-country" src="./assets/demo/img/en.jpg"></td>
+                                                    <td class="text-right">500 000</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Director</td>
+                                                    <td>loginesersexample</td>
+                                                    <td class="text-center" ><img class="table-country" src="./assets/demo/img/en.jpg"></td>
+                                                    <td class="text-right">500 000</td>
+                                                </tr>       
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <span>Created for Marketpeak - <a href="#" class="text-weight-regular">Zendo.cloud</a></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+<!-- Basic js -->
+<script src="./assets/js/jquery-3.3.1.min.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<!-- mCustomScrollbar -->
+<script src="./assets/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Select2 -->
+<script src="./assets/plugins/select2/select2.min.js"></script>
+<!-- Toasters -->
+<script src="./assets/plugins/toastr/toastr.min.js"></script>
+<!-- DataTables -->
+<script src="./assets/plugins/datatables/datatables.min.js"></script>
+<!-- Main js -->
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

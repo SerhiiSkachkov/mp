@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="shortcut icon" href="./assets/demo/img/favicon.png">
+    <title>Markeatpeak - <?=$pageTitle;?></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/v4-shims.min.css">
+    <!-- Scrollbar -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/select2/select2.min.css">
+    <!-- Toasters -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/toastr/toastr.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/datatables/datatables.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/demo/css/view_d3js.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<!-- <body class="sidebar-minimize"> -->
+<body>
+    <div class="page-container">
+        <div id="mainSidebar" class="sidebar-main">
+            <div class="sidebar-header">
+                <a class="sidebar-brand" href="#">
+                    <img src="./assets/demo/img/logo.png"><span class="text-blue">Market</span><span>Peak</span>
+                </a>
+            </div>
+            <ul class="navigation">
+                <li class="navigation-header">
+                    <span>Pages</span>
+                </li>
+                <li class="active">
+                    <a href="/dashboard.php">
+                        <i class="fal fa-tachometer"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-list-ul"></i>
+                        <span>ICO projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-dollar-sign"></i>
+                        <span>Investments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-chart-bar"></i>
+                        <span>Marketing</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-chart-line"></i>
+                                <span>Promotion</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-folder-minus"></i>
+                                <span>Materials</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-file-invoice-dollar"></i>
+                                <span>Compensation plan</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-browser"></i>
+                                <span>Menu level 2</span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-internet-explorer"></i>
+                                        <span>IExplorer</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-chrome"></i>
+                                        <span>Google Chrome</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-firefox"></i>
+                                        <span>Mozilla Firefox</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-share-alt"></i>
+                        <span>Network</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-calculator-alt"></i>
+                        <span>Finance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-envelope-open"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-shopping-cart"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-newspaper"></i>
+                        <span>News</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-headset"></i>
+                        <span>Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-cog"></i>
+                        <span>Admin panel</span>
+                    </a>
+                </li>
+            </ul>
+            <span class="close-sidebar-main toggle-sidebar-main_js"></span>
+        </div>
+        <div class="content-wrapper">
+            <header class="page-header">
+                <div class="left-side">
+                    <a class="toggle-sidebar-main toggle-sidebar-main_js"><span></span></a>
+                    <ul class="breadcrumbs">
+                        <li><a href="#">Main</a></li>
+                        <li><?=$pageTitle;?></li>
+                    </ul>
+                </div>
+                <div class="right-side">
+                    <div class="referal-link">
+                        <input type="text" value="http://admin.marketpeak">
+                        <a id="linkReferalButton" href="#"><i class="fal fa-copy"></i></a>
+                    </div>
+                    <div class="dropdown lang-menu">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            EN
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">
+                                <img src="./assets/demo/img/ru.jpg" alt="Russia">
+                                Russian
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./assets/demo/img/en.jpg" alt="Russia">
+                                English
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./assets/demo/img/sp.jpg" alt="Russia">
+                                Spanish
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown user-menu">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Konstantin
+                            <i class="fas fa-caret-down"></i>
+                            <img src="./assets/demo/img/user.jpg" class="avatar-user">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">
+                                <i class="fal fa-user"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fal fa-sign-out"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="container-fluid">
+                    <div class="panel">
+                        <ul class="nav nav-tabs pt-3" id="profileTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="allProjects-tab" data-toggle="tab" href="#allProjects" role="tab" aria-controls="allProjects" aria-selected="true">All projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="completeICO-tab" data-toggle="tab" href="#completeICO" role="tab" aria-controls="completeICO" aria-selected="false">Completed ICO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="activeICO-tab" data-toggle="tab" href="#activeICO" role="tab" aria-controls="activeICO" aria-selected="false">Active ICO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="comingSoon-tab" data-toggle="tab" href="#comingSoon" role="tab" aria-controls="comingSoon" aria-selected="false">Coming soon</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="profileTabContent">
+                            <div class="tab-pane fade show active" id="allProjects" role="tabpanel" aria-labelledby="allProjects-tab">
+                                <div class="row ico-list">
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-1.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-1.jpg">
+                                                <p>Where your contents become tokens</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-2.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-2.jpg">
+                                                <p>Social Trading and Investment Platform</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-3.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-3.jpg">
+                                                <p>Shopping online is meant to be easy...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-4.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-4.jpg">
+                                                <p>Decentralized Career Platform!</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-4.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-4.jpg">
+                                                <p>Decentralized Career Platform!</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-3.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-3.jpg">
+                                                <p>Shopping online is meant to be easy...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-1.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-1.jpg">
+                                                <p>Where your contents become tokens</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-2.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-2.jpg">
+                                                <p>Social Trading and Investment Platform</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="completeICO" role="tabpanel" aria-labelledby="completeICO-tab">
+                                <div class="row ico-list">
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-2.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-2.jpg">
+                                                <p>Social Trading and Investment Platform</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-2.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-2.jpg">
+                                                <p>Social Trading and Investment Platform</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-1.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-1.jpg">
+                                                <p>Where your contents become tokens</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-3.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-3.jpg">
+                                                <p>Shopping online is meant to be easy...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-4.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-4.jpg">
+                                                <p>Decentralized Career Platform!</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-4.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-4.jpg">
+                                                <p>Decentralized Career Platform!</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-3.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-3.jpg">
+                                                <p>Shopping online is meant to be easy...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-1.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-1.jpg">
+                                                <p>Where your contents become tokens</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="activeICO" role="tabpanel" aria-labelledby="activeICO-tab">
+                                <div class="row ico-list">
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-2.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-2.jpg">
+                                                <p>Social Trading and Investment Platform</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-3.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-3.jpg">
+                                                <p>Shopping online is meant to be easy...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-1.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-1.jpg">
+                                                <p>Where your contents become tokens</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-2.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-2.jpg">
+                                                <p>Social Trading and Investment Platform</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-1.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-1.jpg">
+                                                <p>Where your contents become tokens</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-3.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-3.jpg">
+                                                <p>Shopping online is meant to be easy...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-4.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-4.jpg">
+                                                <p>Decentralized Career Platform!</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-4.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-4.jpg">
+                                                <p>Decentralized Career Platform!</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="comingSoon" role="tabpanel" aria-labelledby="comingSoon-tab">
+                                <div class="row ico-list">
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-3.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-3.jpg">
+                                                <p>Shopping online is meant to be easy...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-2.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-2.jpg">
+                                                <p>Social Trading and Investment Platform</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-3.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-3.jpg">
+                                                <p>Shopping online is meant to be easy...</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-1.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-1.jpg">
+                                                <p>Where your contents become tokens</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-2.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-2.jpg">
+                                                <p>Social Trading and Investment Platform</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-1.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-1.jpg">
+                                                <p>Where your contents become tokens</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-4.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-4.jpg">
+                                                <p>Decentralized Career Platform!</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-3 col-sm-6 col-12">
+                                        <a href="#">
+                                            <div class="embed-responsive embed-responsive-vertical">
+                                                <img class="embed-responsive-item" src="./assets/demo/img/ico-4.jpg">
+                                                <span class="badge badge-success">active</span>
+                                            </div>
+                                            <div class="ico-description">
+                                                <img src="./assets/demo/img/avatar-4.jpg">
+                                                <p>Decentralized Career Platform!</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <span>Created for Marketpeak - <a href="#" class="text-weight-regular">Zendo.cloud</a></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- Basic js -->
+    <script src="./assets/js/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- mCustomScrollbar -->
+    <script src="./assets/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Select2 -->
+    <script src="./assets/plugins/select2/select2.min.js"></script>
+    <!-- Toasters -->
+    <script src="./assets/plugins/toastr/toastr.min.js"></script>
+    <!-- DataTables -->
+    <script src="./assets/plugins/datatables/datatables.min.js"></script>
+    <!-- Main js -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

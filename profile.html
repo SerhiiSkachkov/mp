@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="shortcut icon" href="./assets/demo/img/favicon.png">
+    <title>Markeatpeak - <?=$pageTitle;?></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/v4-shims.min.css">
+    <!-- Scrollbar -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/select2/select2.min.css">
+    <!-- Toasters -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/toastr/toastr.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/datatables/datatables.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/demo/css/view_d3js.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<!-- <body class="sidebar-minimize"> -->
+<body>
+    <div class="page-container">
+        <div id="mainSidebar" class="sidebar-main">
+            <div class="sidebar-header">
+                <a class="sidebar-brand" href="#">
+                    <img src="./assets/demo/img/logo.png"><span class="text-blue">Market</span><span>Peak</span>
+                </a>
+            </div>
+            <ul class="navigation">
+                <li class="navigation-header">
+                    <span>Pages</span>
+                </li>
+                <li class="active">
+                    <a href="/dashboard.php">
+                        <i class="fal fa-tachometer"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-list-ul"></i>
+                        <span>ICO projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-dollar-sign"></i>
+                        <span>Investments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-chart-bar"></i>
+                        <span>Marketing</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-chart-line"></i>
+                                <span>Promotion</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-folder-minus"></i>
+                                <span>Materials</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-file-invoice-dollar"></i>
+                                <span>Compensation plan</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-browser"></i>
+                                <span>Menu level 2</span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-internet-explorer"></i>
+                                        <span>IExplorer</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-chrome"></i>
+                                        <span>Google Chrome</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-firefox"></i>
+                                        <span>Mozilla Firefox</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-share-alt"></i>
+                        <span>Network</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-calculator-alt"></i>
+                        <span>Finance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-envelope-open"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-shopping-cart"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-newspaper"></i>
+                        <span>News</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-headset"></i>
+                        <span>Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-cog"></i>
+                        <span>Admin panel</span>
+                    </a>
+                </li>
+            </ul>
+            <span class="close-sidebar-main toggle-sidebar-main_js"></span>
+        </div>
+        <div class="content-wrapper">
+            <header class="page-header">
+                <div class="left-side">
+                    <a class="toggle-sidebar-main toggle-sidebar-main_js"><span></span></a>
+                    <ul class="breadcrumbs">
+                        <li><a href="#">Main</a></li>
+                        <li><?=$pageTitle;?></li>
+                    </ul>
+                </div>
+                <div class="right-side">
+                    <div class="referal-link">
+                        <input type="text" value="http://admin.marketpeak">
+                        <a id="linkReferalButton" href="#"><i class="fal fa-copy"></i></a>
+                    </div>
+                    <div class="dropdown lang-menu">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            EN
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">
+                                <img src="./assets/demo/img/ru.jpg" alt="Russia">
+                                Russian
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./assets/demo/img/en.jpg" alt="Russia">
+                                English
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./assets/demo/img/sp.jpg" alt="Russia">
+                                Spanish
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown user-menu">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Konstantin
+                            <i class="fas fa-caret-down"></i>
+                            <img src="./assets/demo/img/user.jpg" class="avatar-user">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">
+                                <i class="fal fa-user"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fal fa-sign-out"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="container-fluid">
+                    <div class="profile-page">
+                        <div class="profile-avatar">
+                            <div class="panel">
+                                <div class="panel-body">
+                                    <div class="user-avatar">
+                                        <a href="#">
+                                            <img src="./assets/demo/img/main-avatar.jpg" alt="Avatar">
+                                        </a>
+                                    </div>
+                                    <div class="btn-group">
+                                        <a href="#" class="btn btn-success"><i class="fal fa-pencil"></i>Change</a>
+                                        <a href="#" class="btn btn-danger"><i class="fal fa-times"></i>Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-body">
+                                    <div class="user-avatar">
+                                        <a href="#"></a>
+                                    </div>
+                                    <div class="btn-group">
+                                        <a href="#" class="btn btn-success"><i class="fal fa-cloud-upload"></i>Upload photo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-data">
+                            <div class="panel">
+                                <ul class="nav nav-tabs pt-3" id="profileTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="personalData-tab" data-toggle="tab" href="#personalData" role="tab" aria-controls="personalData" aria-selected="true">Personal data</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="wallets-tab" data-toggle="tab" href="#wallets" role="tab" aria-controls="wallets" aria-selected="false">Wallets</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="security-tab" data-toggle="tab" href="#security" role="tab" aria-controls="security" aria-selected="false">Security and Entry</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="profileTabContent">
+                                    <div class="tab-pane fade show active" id="personalData" role="tabpanel" aria-labelledby="personalData-tab">
+                                        <p class="text-right mb-4">
+                                            <a href="javascript:void(0);" class="btn btn-primary show-edit_js"><i class="fal fa-pencil"></i>Change</a>
+                                            <a href="javascript:void(0);" class="btn btn-primary hide-edit_js"><i class="fal fa-arrow-left"></i>Back to preview</a>
+                                        </p>
+                                        <form class="form-light">
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Your ID</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" class="form-control" value="987 541 2">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Nickname</label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <input type="text" class="form-control" value="UserName">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Name</label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <input type="text" class="form-control" value="myname">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Surname</label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <input type="text" class="form-control" value="mysurname">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Address</label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <input type="text" class="form-control" value="Switzerland, 3011 Bern, Zeughausgasse 28">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Skype</label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <input type="text" class="form-control" value="myloginskype">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Phone</label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <input type="text" class="form-control" value="+380969876543">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Email</label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <input type="text" class="form-control" value="myemailexample@marketpeak.com">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Country</label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <select class="form-control select2">
+                                                        <option>England</option>
+                                                        <option selected>Switzerland</option>
+                                                        <option>France</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row referal-link-block">
+                                                <label class="col-md-3 col-form-label">Referal link</label>
+                                                <div class="col-md-9 padding-left-profile">
+                                                    <div class="row flex-nowrap">
+                                                        <label class="col col-form-label referal-link-text">http://admin.marketpeak.tcl.ukrtech.info</label>
+                                                        <label class="col-auto col-form-label">
+                                                            <a href="#" class="btn btn-primary"><i class="fal fa-copy"></i></a>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Message for personally invited</label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <textarea rows="5" class="form-control">Ad putent suscipit duo, eos ut illum doming voluptatum, ex usu putant urbanitas consetetur. Quando impedit facilisi duo in, sed no pertinacia honestatis. Est cu albucius molestiae, mei an ubique possim. No qui dicat ceteros maiorum, aeterno scripta quaestio his te. Ut quis voluptaria qui, ne mel quod ridens aliquam, sea nemore quaeque ne.</textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane fade" id="wallets" role="tabpanel" aria-labelledby="wallets-tab">
+                                        <p class="text-right mb-4">
+                                            <a href="javascript:void(0);" class="btn btn-primary show-edit_js"><i class="fal fa-pencil"></i>Change</a>
+                                            <a href="javascript:void(0);" class="btn btn-primary hide-edit_js"><i class="fal fa-arrow-left"></i>Back to preview</a>
+                                        </p>
+                                        <form class="form-light">
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Bitcoin address</label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <input type="text" class="form-control" value="9761 4729 2157 2549 26">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Ethereum address</label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <input type="text" class="form-control" value="9761 4729 2157 2549 26">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">AdvCash address</label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <input type="text" class="form-control" value="9761 4729 2157 2549 26">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+                                        <div class="form-light">
+                                            <div class="form-group row" id="showPass">
+                                                <label class="col-md-3 col-form-label">
+                                                    <span class="text-primary" data-toggle="tooltip" data-placement="bottom" title="Cell number"><i class="fal fa-question-circle"></i></span>
+                                                    Password
+                                                </label>
+                                                <div class="col-md-9 padding-left-profile">
+                                                    <div class="row flex-nowrap">
+                                                        <label class="col col-form-label referal-link-text">**********</label>
+                                                        <label class="col-auto col-form-label">
+                                                            <a href="javascript:void(0);" class="btn btn-primary edit-pass_js">Change</a>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <form id="formEditPass">
+                                                <div class="form-group row">
+                                                    <label class="col-md-3 col-form-label">Current password</label>
+                                                    <div class="col-md-9">
+                                                        <input type="password" class="form-control" value="123456a">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-md-3 col-form-label">New password</label>
+                                                    <div class="col-md-9">
+                                                        <input type="password" class="form-control" value="123456a">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-md-3 col-form-label">Repeat new password</label>
+                                                    <div class="col-md-9">
+                                                        <input type="password" class="form-control" value="123456a">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-md-9 offset-md-3 pb-4 padding-left-profile">
+                                                        <a href="javascript:void(0);" class="btn btn-success pr-4"><i class="fal fa-check"></i>Change</a>
+                                                        <a href="javascript:void(0);" class="btn btn-danger cancel-edit-pass_js px-4"><i class="fal fa-times"></i>Cancel</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">
+                                                    <span class="text-primary" data-toggle="tooltip" data-placement="bottom" title="Cell number"><i class="fal fa-question-circle"></i></span>
+                                                    Anonymity
+                                                </label>
+                                                <label class="col-md-9 col-form-label padding-left-profile">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="anonymityYes" name="anonymityradio" class="custom-control-input">
+                                                        <label class="custom-control-label" for="anonymityYes">Yes</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="anonymityNo" name="anonymityradio" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="anonymityNo">No</label>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">
+                                                    <span class="text-primary" data-toggle="tooltip" data-placement="bottom" title="Cell number"><i class="fal fa-question-circle"></i></span>
+                                                    Account telegram
+                                                </label>
+                                                <div class="col-md-9" data-field="edit">
+                                                    <div class="telegram-edit">
+                                                        <input type="text" class="form-control" value="9761 4729 2157 2549 26">
+                                                        <a href="javascript:void(0);" class="btn btn-success"><i class="fal fa-check"></i>Check</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <span>Created for Marketpeak - <a href="#" class="text-weight-regular">Zendo.cloud</a></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+<!-- Basic js -->
+<script src="./assets/js/jquery-3.3.1.min.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<!-- mCustomScrollbar -->
+<script src="./assets/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Select2 -->
+<script src="./assets/plugins/select2/select2.min.js"></script>
+<!-- Toasters -->
+<script src="./assets/plugins/toastr/toastr.min.js"></script>
+<!-- DataTables -->
+<script src="./assets/plugins/datatables/datatables.min.js"></script>
+<!-- Main js -->
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

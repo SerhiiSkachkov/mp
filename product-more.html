@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link rel="shortcut icon" href="./assets/demo/img/favicon.png">
+	<title>Markeatpeak - <?=$pageTitle;?></title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- Fonts -->
+	<link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/all.css">
+	<link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/v4-shims.min.css">
+	<!-- Scrollbar -->
+	<link rel="stylesheet" type="text/css" href="./assets/plugins/scrollbar/jquery.mCustomScrollbar.min.css">
+	<!-- Select2 -->
+	<link rel="stylesheet" type="text/css" href="./assets/plugins/select2/select2.min.css">
+	<!-- Toasters -->
+	<link rel="stylesheet" type="text/css" href="./assets/plugins/toastr/toastr.min.css">
+	<!-- DataTables -->
+	<link rel="stylesheet" type="text/css" href="./assets/plugins/datatables/datatables.min.css">
+	<!-- Main css -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/demo/css/view_d3js.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<!-- <body class="sidebar-minimize"> -->
+<body>
+    <div class="page-container">
+				<div id="mainSidebar" class="sidebar-main">
+				    <div class="sidebar-header">
+				        <a class="sidebar-brand" href="#">
+				            <img src="./assets/demo/img/logo.png"><span class="text-blue">Market</span><span>Peak</span>
+				        </a>
+				    </div>
+				    <ul class="navigation">
+				        <li class="navigation-header">
+				            <span>Pages</span>
+				        </li>
+				        <li class="active">
+				            <a href="/dashboard.php">
+				                <i class="fal fa-tachometer"></i>
+				                <span>Dashboard</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-list-ul"></i>
+				                <span>ICO projects</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-dollar-sign"></i>
+				                <span>Investments</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-chart-bar"></i>
+				                <span>Marketing</span>
+				            </a>
+				            <ul>
+				                <li>
+				                    <a href="#">
+				                        <i class="fal fa-chart-line"></i>
+				                        <span>Promotion</span>
+				                    </a>
+				                </li>
+				                <li>
+				                    <a href="#">
+				                        <i class="fal fa-folder-minus"></i>
+				                        <span>Materials</span>
+				                    </a>
+				                </li>
+				                <li>
+				                    <a href="#">
+				                        <i class="fal fa-file-invoice-dollar"></i>
+				                        <span>Compensation plan</span>
+				                    </a>
+				                </li>
+				                <li>
+				                    <a href="#">
+				                        <i class="fal fa-browser"></i>
+				                        <span>Menu level 2</span>
+				                    </a>
+				                    <ul>
+				                        <li>
+				                            <a href="#">
+				                                <i class="fab fa-internet-explorer"></i>
+				                                <span>IExplorer</span>
+				                            </a>
+				                        </li>
+				                        <li>
+				                            <a href="#">
+				                                <i class="fab fa-chrome"></i>
+				                                <span>Google Chrome</span>
+				                            </a>
+				                        </li>
+				                        <li>
+				                            <a href="#">
+				                                <i class="fab fa-firefox"></i>
+				                                <span>Mozilla Firefox</span>
+				                            </a>
+				                        </li>
+				                    </ul>
+				                </li>
+				            </ul>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-share-alt"></i>
+				                <span>Network</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-calculator-alt"></i>
+				                <span>Finance</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-envelope-open"></i>
+				                <span>Messages</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-shopping-cart"></i>
+				                <span>Products</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-newspaper"></i>
+				                <span>News</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-question-circle"></i>
+				                <span>FAQ</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-headset"></i>
+				                <span>Help</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-cog"></i>
+				                <span>Admin panel</span>
+				            </a>
+				        </li>
+				    </ul>
+				    <span class="close-sidebar-main toggle-sidebar-main_js"></span>
+				</div>
+        <div class="content-wrapper">
+						<header class="page-header">
+						    <div class="left-side">
+						        <a class="toggle-sidebar-main toggle-sidebar-main_js"><span></span></a>
+						        <ul class="breadcrumbs">
+						            <li><a href="#">Main</a></li>
+						            <li><?=$pageTitle;?></li>
+						        </ul>
+						    </div>
+						    <div class="right-side">
+						        <div class="referal-link">
+						            <input type="text" value="http://admin.marketpeak">
+						            <a id="linkReferalButton" href="#"><i class="fal fa-copy"></i></a>
+						        </div>
+						        <div class="dropdown lang-menu">
+						            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						                EN
+						                <i class="fas fa-caret-down"></i>
+						            </a>
+						            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						                <a class="dropdown-item" href="#">
+						                    <img src="./assets/demo/img/ru.jpg" alt="Russia">
+						                    Russian
+						                </a>
+						                <a class="dropdown-item" href="#">
+						                    <img src="./assets/demo/img/en.jpg" alt="Russia">
+						                    English
+						                </a>
+						                <a class="dropdown-item" href="#">
+						                    <img src="./assets/demo/img/sp.jpg" alt="Russia">
+						                    Spanish
+						                </a>
+						            </div>
+						        </div>
+						        <div class="dropdown user-menu">
+						            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						                Konstantin
+						                <i class="fas fa-caret-down"></i>
+						                <img src="./assets/demo/img/user.jpg" class="avatar-user">
+						            </a>
+						            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+						                <a class="dropdown-item" href="#">
+						                    <i class="fal fa-user"></i>
+						                    Profile
+						                </a>
+						                <a class="dropdown-item" href="#">
+						                    <i class="fal fa-sign-out"></i>
+						                    Logout
+						                </a>
+						            </div>
+						        </div>
+						    </div>
+						</header>
+            <div class="main-wrapper">
+                <div class="container-fluid">
+                	<div class="row flex-xl-nowrap">
+				        <div class=" col-md-12 col-xl-auto">
+							<div class="pr-el panel">
+								<div class="panel-body">
+									<div class="pr-el-img text-center mb-4">
+										<img src="./assets/demo/img/product.png" alt="prod">
+									</div>
+									<h3 class="text-weight-semibold text-uppercase text-center mb-4">BitPhoenix token</h3>
+									<div class="pr-el-prices d-flex justify-content-center align-items-center mb-4">
+										<div class="text-weight-semibold text-primary">1 BPX</div>
+										<div class="pr-el-prices-equally rounded-circle text-white bg-primary text-weight-semibold mx-3 mx-md-5">  =  </div>
+										<div class="text-gray2"> $ 0.12 </div>
+									</div>
+							        <div class="row no-gutters justify-content-center pt-4 border-top">
+							        	<div class="col-auto flex-grow-1 text-center border-right">
+									      		<a class="btn btn-costom btn-green" href="">
+									      			<i class="fal fa-cart-plus mr-3"></i>
+									      			Buy
+									      		</a>
+									      	</div>
+									      	<div class="col-auto flex-grow-1 text-center">
+									      		<a class="btn btn-costom btn-red" href="">
+									      			<i class="fal fa-arrow-up mr-3"></i></i>
+									      			Sell
+									      		</a>
+							        	</div>
+							        </div>
+								</div>
+							</div>
+                			<a href="" data-toggle="modal" data-target=".bd-example-modal-lg" > ТАБ 1</a>
+                			<a href="" data-toggle="modal" data-target="#Modal2" > ТАБ 2</a>
+                			<a href="" data-toggle="modal" data-target="#Modal3" > ТАБ 3</a>
+                			<a href="" data-toggle="modal" data-target="#Modal4" > ТАБ 4</a>
+                		</div>
+						<div class="col-xl">	
+		                    <div class="panel">
+		                        <div class="panel-body">
+		                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+		                                <li class="nav-item">
+		                                  <a class="nav-link active" id="pills-personal-tab" data-toggle="pill" href="#pills-personal" role="tab" aria-controls="pills-personal" aria-selected="true">General information</a>
+		                                </li>
+		                                <li class="nav-item">
+		                                  <a class="nav-link" id="pills-dinamic-tab" data-toggle="pill" href="#pills-dinamic" role="tab" aria-controls="pills-dinamic" aria-selected="false">Strategy</span></a>
+		                                </li>
+		                            </ul>
+		                            <div class="tab-content" id="pills-tabContent">
+		                                <div class="tab-pane fade show active" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
+		                                	<div class="col-12">
+			                                    <div class="row">
+			                                        <div class="col-12 border-bottom border-dashed-bottom py-4">
+			                                        	<div class="row">
+			                                        		<div class="col-12 col-md-4">
+			                                        			<p>Token name</p>
+			                                        		</div>
+			                                        		<div class="col-12 col-md-8">
+			                                        			<p>BitPhoenix Token</p>
+			                                           		</div>
+			                                           	</div>
+			                                        </div>
+			                                        <div class="col-12 border-bottom border-dashed-bottom py-4">
+			                                        	<div class="row">
+			                                        		<div class="col-12 col-md-4">
+			                                        			<p>Description</p>
+			                                        		</div>
+			                                        		<div class="col-12 col-md-8">
+			                                        			<p>Ad putent suscipit duo, eos ut illum doming voluptatum, ex usu putant urbanitas consetetur. Quando impedit facilisi duo in, sed no pertinacia honestatis. Est cu albucius molestiae,WWxmei an ubique possim. No qui dicat ceteros maiorum, aeterno scripta quaestio his te. Ut quis voluptaria qui, ne mel quod ridens aliquam, sea nemore quaeque ne.</p>
+			                                           		</div>
+			                                           	</div>
+			                                        </div>
+			                                     	<div class="col-12 border-bottom border-dashed-bottom py-4">
+			                                        	<div class="row">
+			                                        		<div class="col-12 col-md-4">
+			                                        			<p>Key token features</p>
+			                                        		</div>
+			                                        		<div class="col-12 col-md-8">
+			                                        			<ul class="costom-list">
+			                                        				<li>Key number 1</li>
+			                                        				<li>Key number 2</li>
+			                                        				<li>Key number 3</li>
+			                                        				<li>Key number 4</li>
+			                                        				<li>Key number 5</li>
+			                                        				<li>Key number 6</li>
+			                                        				<li>Key number 7</li>
+			                                        			</ul>
+			                                           		</div>
+			                                           	</div>
+			                                        </div>
+			                                       	<div class="col-12 border-bottom border-dashed-bottom py-4">
+			                                        	<div class="row">
+			                                        		<div class="col-12 col-md-4">
+			                                        			<p>Key strengths</p>
+			                                        		</div>
+			                                        		<div class="col-12 col-md-8">
+			                                        			<p>Ad putent suscipit duo, eos ut illum doming voluptatum, ex usu putant urbanitas consetetur. Quando impedit facilisi duo in, sed no pertinacia honestatis. Est cu albucius molestiae,WWxmei an ubique possim. No qui dicat ceteros maiorum, aeterno scripta quaestio his te. Ut quis voluptaria qui, ne mel quod ridens aliquam, sea nemore quaeque ne.</p>
+			                                           		</div>
+			                                           	</div>
+			                                        </div>
+			                                        <div class="col-12 py-4">
+			                                        	<div class="row">
+			                                        		<div class="col-12 col-md-4">
+			                                        			<p>Key metrics</p>
+			                                        		</div>
+			                                        		<div class="col-12 col-md-8">
+			                                        			<p>Ad putent suscipit duo, eos ut illum doming voluptatum, ex usu putant urbanitas consetetur. Quando impedit facilisi duo in, sed no pertinacia honestatis. Est cu albucius molestiae,WWxmei an ubique possim. No qui dicat ceteros maiorum, aeterno scripta quaestio his te. Ut quis voluptaria qui, ne mel quod ridens aliquam, sea nemore quaeque ne.</p>
+			                                           		</div>
+			                                           	</div>
+			                                        </div>
+			                                    </div>
+			                                </div>
+		                                </div>
+		                                <div class="tab-pane fade" id="pills-dinamic" role="tabpanel" aria-labelledby="pills-dinamic-tab">
+		                                	<div class="col-xl-12">
+		                                		<div class="row">
+		                                           <div class="col-12">
+		                                           		<h4 class="mb0">Token rate</h4>
+		                                           	</div>
+		                                           	<div class="col-12 mb-4">
+		                                           		<div class="chart-container chart-container-prod">
+		                                               		<div class="chart chart-prod" id="totalIncome"></div>
+		                                           		</div>
+		                                           	</div>
+		                                           	<div class="col-12 border-bottom border-dashed-bottom py-4">
+		                                           		<div class="row">
+		                                           			<div class="col-12 col-md-4">
+		                                           				<p>Description</p>
+		                                           			</div>
+		                                           			<div class="col-12 col-md-8">
+		                                           				<p>Ad putent suscipit duo, eos ut illum doming voluptatum, ex usu putant urbanitas consetetur. Quando impedit facilisi duo in, sed no pertinacia honestatis. Est cu albucius molestiae,WWxmei an ubique possim. No qui dicat ceteros maiorum, aeterno scripta quaestio his te. Ut quis voluptaria qui, ne mel quod ridens aliquam, sea nemore quaeque ne.</p>
+		                                           			</div>
+		                                           		</div>
+		                                           	</div>
+		                                           	<div class="col-12 py-4">
+		                                           		<div class="row">
+		                                           			<div class="col-12 col-md-4">
+		                                           				<p>Strategy</p>
+		                                           			</div>
+		                                           			<div class="col-12 col-md-8">
+		                                           				<p>Ad putent suscipit duo, eos ut illum doming voluptatum, ex usu putant urbanitas consetetur. Quando impedit facilisi duo in, sed no pertinacia honestatis. Est cu albucius molestiae,WWxmei an ubique possim. No qui dicat ceteros maiorum, aeterno scripta quaestio his te. Ut quis voluptaria qui, ne mel quod ridens aliquam, sea nemore quaeque ne.</p>
+		                                           			</div>
+		                                           		</div>
+		                                           	</div>
+		                                       </div>
+											</div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            </div>
+		        </div>
+					<div class="modal modal-costom fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+						    <div class="modal-content">
+						      	<div class="modal-header px-sm-5">
+						        	<p class="modal-title text-costom-green" id="myLargeModalLabel"><i class="fal fa-check mr-3"></i> You are verified</p>
+						        	<button type="button" class="close mr-sm-0" data-dismiss="modal" aria-label="Close">
+						          		<span aria-hidden="true">×</span>
+						        	</button>
+						      	</div>
+						      	<div class="modal-body">
+						      		<div class="col-12">
+							      		<div class="row">
+							      			<div class="col-12 px-sm-5 mb-5">
+							      				<div class="step py-5 border-bottom border-top">
+							      					<div class="row justify-content-center">
+							      						<div class="col-auto">
+							      							<div class="step-rect active"></div>
+							      						</div>
+							      						<div class="col-auto col-sm-2">
+							      							<div class="step-line"></div>
+							      						</div>
+							      						<div class="col-auto">
+							      							<div class="step-rect"></div>
+							      						</div>
+							      						<div class="col-auto col-sm-2">
+							      							<div class="step-line"></div>
+							      						</div>
+							      						<div class="col-auto">
+							      							<div class="step-rect"></div>
+							      						</div>
+							      					</div>
+							      				</div>
+							      			</div>
+							      			<div class="col-12">
+							      				<h3 class="text-center">BITPHOENIX TOKENS ORDER</h3>
+							      			</div>
+							      			<div class="col-12 mb-5">
+							      				<div class="row justify-content-center">
+							      					<div class="col-10 text-center">
+							      						<p class="mb-0">Ad putent suscipit duo, eos ut illum doming voluptatum, ex usu putant urbanitas consetetur. Quando impedit facilisi duo in, sed no pertinacia honestatis. Est cu albucius molestiae, mei an ubique possim.</p>
+														<p> No qui dicat ceteros maiorum, aeterno scripta quaestio his te. Ut quis voluptaria qui, ne mel quod ridens aliquam, sea nemore quaeque ne.</p>
+							      					</div>
+							      				</div>
+							      			</div>
+							      			<div class="col-12 mb-5">
+							      				<div class="row">
+							      					<div class="col-md-4 text-center border-right pt-4">
+							      						<div class="prod-el">
+							  								<div class="prod-el-box mx-auto mb-4" style="background-image: url('./assets/demo/img/elipse.png')">
+							      								<div class="prod-el-txt text-primary text-weight-semibold">500</div> 
+							      							</div>
+							      							<h4>Investment limits</h4>
+							      							<p class="prod-txt">Min. purchase amount 500 USD</p>
+							      						</div>
+							      					</div>
+							      					<div class="col-md-4 text-center pt-4">
+							      						<div class="prod-el">
+							      							<div class="prod-el-box mx-auto mb-4" style="background-image: url('./assets/demo/img/elipse.png')">
+							      								<div class="prod-el-txt text-primary text-weight-semibold">10%</div> 
+							      							</div>
+							      							<h4>Fee model</h4>
+							      							<p class="prod-txt">Fee will with her id from you contribution upon conversion into the tokens</p>
+							      						</div>
+							      					</div>
+							      					<div class="col-md-4 text-center border-left pt-4">
+							      						<div class="prod-el">
+							      							<div class="prod-el-box mx-auto mb-4" style="background-image: url('./assets/demo/img/elipse.png')">
+							      								<div class="prod-el-txt text-primary text-weight-semibold">6 m</div> 
+							      							</div>
+							      							<h4>Lock up</h4>
+							      							<p class="prod-txt">Tokens will bo locked for 6 months. 1 month unlocked 5%. 2 month unlocked 10% etc...</p>
+							      						</div>
+							      					</div>
+							      				</div>
+							      			</div>
+							      			<div class="col-12 bg-gray3 py-5 border-top border-bottom">
+							      				<div class="d-flex flex-wrap justify-content-center">
+							      					<div class="prod-el mx-3 mb10">
+			                                            <div class="panel p20 mb-0">
+			                                                <input type="radio" class="prod-el-inp hidden" id="radio-country1" name="radio-country" checked="">
+			                                                <label class="prod-el-lbl d-flex align-items-center" for="radio-country1">
+			                                                	<div class="prod-el-icon border-right text-info">
+			                                                		<i class="fab fa-ethereum mr20"></i>
+			                                                	</div>
+			                                                	<span class="pl20 text-weight-semibold">ETHERIUM</span>
+			                                                </label>
+			                                            </div>
+			                                        </div>
+			                                        <div class="prod-el mx-3 mb10">
+			                                            <div class="panel p20 mb-0">
+			                                                <input type="radio" class="prod-el-inp hidden" id="radio-country2" name="radio-country">
+			                                                <label class="prod-el-lbl d-flex align-items-center" for="radio-country2">
+			                                                	<div class="prod-el-icon border-right text-warning">
+			                                                		<i class="fab fa-bitcoin mr20"></i>
+			                                                	</div>
+			                                                	<span class="pl20 text-weight-semibold">BITCOIN</span>
+			                                                </label>
+			                                            </div>
+			                                        </div>
+			                                        <div class="prod-el mx-3 mb10">
+			                                            <div class="panel p20 mb-0">
+			                                                <input type="radio" class="prod-el-inp hidden" id="radio-country3" name="radio-country">
+			                                                <label class="prod-el-lbl d-flex align-items-center" for="radio-country3">
+			                                                	<div class="prod-el-icon text-primary border-right">
+			                                                		<i class="far fa-dollar-sign mr20"></i>
+			                                                	</div>
+			                                                	<span class="pl20 text-weight-semibold">USD</span>
+			                                                </label>
+			                                            </div>
+			                                        </div>
+<!-- 							      					<div class="col-md-10 col-lg-3 mb10 mb-sm-0">
+							      						<a class="pr-btn d-block panel mb-0" href="">
+								      						<i class="fal fa-check pl20 pr-20 border-right border-right text-success"></i>
+								      						<span class="text-weight-bold pl-4">ETHERIUM</span>
+								      					</a>
+							      					</div>
+							      					<div class="col-md-10 col-lg-3 mb10 mb-sm-0">
+							      						<a class="pr-btn d-block panel mb-0" href="">
+								      						<i class="fab fa-btc  pl20 pr-20 border-right text-warning"></i>
+								      						<span class="text-weight-bold pl-4">BITCOIN</span>
+								      					</a>
+							      					</div>
+							      					<div class="col-md-10 col-lg-3 mb10 mb-sm-0">
+							      						<a class="pr-btn d-block panel mb-0" href="">
+							      							<i class="far fa-dollar-sign  pl20 pr-20 border-right text-primary"></i>
+							      							<span class="text-weight-bold pl-4">USD</span>
+							      						</a>
+							      					</div> -->
+							      				</div>
+							      			</div>
+							      			<div class="col-12 px-5">
+							      				<div class="row border-top py-4">
+							      					<div class="col-6"></div>
+							      					<div class="col-md-6 border-left text-center">
+							      						<a class="btn btn-success" href="">Next step
+							      						<i class="fal fa-arrow-right"></i></a>
+							      					</div>
+							      				</div>
+							      			</div>
+							      		</div>
+						      		</div>
+						      	</div>
+						    </div>
+						</div>
+					</div>
+					<div class="modal modal-costom fade bd-example-modal-lg" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel2" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+						    <div class="modal-content">
+						      	<div class="modal-header">
+						        	<p class="modal-title text-costom-green" id="myLargeModalLabel2"><i class="fal fa-check mr-3"></i> You are verified</p>
+						        	<button type="button" class="close mr-sm-0" data-dismiss="modal" aria-label="Close">
+						          		<span aria-hidden="true">×</span>
+						        	</button>
+						      	</div>
+						      	<div class="modal-body">
+						      		<div class="col-12">
+							      		<div class="row">
+							      			<div class="col-12 mb-5 px-sm-5">
+							      				<div class="step py-5 border-bottom border-top">
+							      					<div class="row justify-content-center">
+							      						<div class="col-auto">
+							      							<div class="step-rect active prev"></div>
+							      						</div>
+							      						<div class="col-auto col-sm-2">
+							      							<div class="step-line active"></div>
+							      						</div>
+							      						<div class="col-auto">
+							      							<div class="step-rect active"></div>
+							      						</div>
+							      						<div class="col-auto col-sm-2">
+							      							<div class="step-line"></div>
+							      						</div>
+							      						<div class="col-auto">
+							      							<div class="step-rect"></div>
+							      						</div>
+							      					</div>
+							      				</div>
+							      			</div>
+							      			<div class="col-12">
+							      				<h3 class="h1 text-center">BITPHOENIX TOKENS ORDER</h3>
+							      			</div>
+							      			<div class="col-12 mb-5">
+							      				<div class="row justify-content-center">
+							      					<div class="col-10 text-center">
+							      						<p class="mb-0">Ad putent suscipit duo, eos ut illum doming voluptatum, ex usu putant urbanitas consetetur. Quando impedit facilisi duo in, sed no pertinacia honestatis. Est cu albucius molestiae, mei an ubique possim.</p>
+														<p> No qui dicat ceteros maiorum, aeterno scripta quaestio his te. Ut quis voluptaria qui, ne mel quod ridens aliquam, sea nemore quaeque ne.</p>
+							      					</div>
+							      				</div>
+							      			</div>
+							      			<div class="col-12 mb-5">
+							      				<div class="row">
+							      					<div class="col-md-4 text-center border-right py-4">
+							      						<div class="prod-el">
+							      							<h2 class="h1 text-primary text-weight-semibold">1000</h2> 
+							      							<p class="prod-txt">Min. purchase amount 500 USD</p>
+							      						</div>
+							      					</div>
+							      					<div class="col-md-4 text-center py-4">
+							      						<div class="prod-el">
+							      							<h2 class="h1 text-primary text-weight-semibold">0.335012575</h2> 
+							      							<p class="prod-txt">Investment amount in BTC</p>
+							      						</div>
+							      					</div>
+							      					<div class="col-md-4 text-center border-left py-4">
+							      						<div class="prod-el">
+							      							<h2 class="h1 text-primary text-weight-semibold">900</h2> 
+							      							<p class="prod-txt">Token amount</p>
+							      						</div>
+							      					</div>
+							      				</div>
+							      			</div>
+							      		</div>
+							      		<div class="row">
+							      			<div class="col-12">
+							      				<h3 class="h1 text-center text-uppercase mb-5">Token purchase agreement</h3>
+							      				<div class="col-12 mb-5">
+								      				<div class="row">
+								      					<div class="col-lg-6 mb-5">
+								      						<fieldset class="clmn px-md-5">
+									      						<legend class="h3 px-2"> Purchaser information</legend>
+								      							<div class="col-12">
+									      							<div class="row">
+									      								<div class="col-md-12">
+									      									<div class="row py-4 border-bottom">
+									      										<div class="col-sm-6">
+									      											<span>Purchaser name</span>
+									      										</div>
+									      										<div class="col-sm-6">
+									      											<span class="text-black">John Doe</span>
+									      										</div>
+									      									</div>
+									      									<div class="row py-4 border-bottom">
+									      										<div class="col-sm-6">
+									      											<span>Address</span>
+									      										</div>
+									      										<div class="col-sm-6">
+									      											<span class="text-black">10 Downing St. London, UK, 156325</span>
+									      										</div>
+									      									</div>
+									      									<div class="row py-4 border-bottom">
+									      										<div class="col-sm-6">
+									      											<span>Phone</span>
+									      										</div>
+									      										<div class="col-sm-6">
+									      											<span class="text-black">+38 (157) 482 - 58 - 23</span>
+									      										</div>
+									      									</div>
+									      									<div class="row py-4 border-bottom">
+									      										<div class="col-sm-6">
+									      											<span>E-mail</span>
+									      										</div>
+									      										<div class="col-sm-6">
+									      											<span class="text-black">emailexample@gmail.com</span>
+									      										</div>
+									      									</div>
+									      									<div class="row py-4 border-bottom">
+									      										<div class="col-sm-6">
+									      											<span>Date of purchase</span>
+									      										</div>
+									      										<div class="col-sm-6">
+									      											<span class="text-black">07 Feb. 2019  |  12:05 pm</span>
+									      										</div>
+									      									</div>
+									      									<div class="row py-4">
+									      										<div class="col-sm-6">
+									      											<div>Are you agree with </div>
+									      												<a href="">terms and conditions?</a>
+									      										</div>
+									      										<div class="col-sm-6 d-flex">
+									      											<span class="custom-control custom-radio mr-5">
+	                                                									<input type="radio" class="custom-control-input change-matrix-filling" id="radio-country1" name="radio-country" checked="">
+	                                               										<label class="custom-control-label" for="radio-country1"><span class="text-weight-semibold">Yes</span></label>
+	                                            									</span>
+	                                            									<span class="custom-control custom-radio">
+	                                                									<input type="radio" class="custom-control-input change-matrix-filling" id="radio-country2" name="radio-country" checked="">
+	                                               										<label class="custom-control-label" for="radio-country2"><span class="text-weight-semibold">No</span></label>
+	                                            									</span>
+									      										</div>
+									      									</div>
+									      									<div class="row py-4 justify-content-center justify-content-sm-end">
+									      										<div class="col-auto">
+									      											<a class="btn btn-costom btn-green" href="">Click here to sign</a>
+									      										</div>
+									      									</div>
+									      								</div>		
+									      							</div>
+								      							</div>
+								      						</fieldset>
+								      					</div>
+								      					<div class="col-lg-6 mb-5">
+								      						<fieldset class="clmn px-md-5">
+									      						<legend class="h3 px-2">Seller information</legend>
+								      							<div class="col-12">
+									      							<div class="row">
+									      								<div class="col-12">
+									      								</div>
+									      								<div class="col-md-12">
+									      									<div class="row py-4 border-bottom">
+									      										<div class="col-md-6">
+									      											<span>Company name</span>
+									      										</div>
+									      										<div class="col-md-6">
+									      											<span class="text-black">John Doe</span>
+									      										</div>
+									      									</div>
+									      									<div class="row py-4">
+									      										<div class="col-md-6">
+									      											<span>Address</span>
+									      										</div>
+									      										<div class="col-md-6">
+									      											<span class="text-black">10 Downing St. London, UK, 156325</span>
+									      										</div>
+									      									</div>
+									      								</div>		
+									      								<div class="col-md-6">
+									      									
+									      								</div>
+									      							</div>
+								      							</div>
+								      						</fieldset>
+								      					</div>
+							      					</div>
+							      				</div>
+							      				<div class="col-12 px-sm-5">
+							      					<div class="row border-top py-4">
+							      						<div class="col-md-6 text-center">
+							      							<a class="btn btn-secondary" href=""><i class="fal fa-arrow-left"></i>Previous step</a>						
+							      						</div>
+							      						<div class="col-md-6 border-left text-center">
+							      							<a class="btn btn-success" href="">Next step<i class="fal fa-arrow-right pl-2"></i></a>
+							      						</div>
+							      					</div>
+							      				</div>
+							      			</div>
+							      		</div>
+						      		</div>
+						    	</div>
+							</div>
+		            	</div>
+		        	</div>
+					<div class="modal modal-costom fade bd-example-modal-lg" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel2" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+						    <div class="modal-content">
+						      	<div class="modal-header">
+						        	<p class="modal-title text-costom-green" id="myLargeModalLabel2"><i class="fal fa-check mr-3"></i> You are verified</p>
+						        	<button type="button" class="close mr-sm-0" data-dismiss="modal" aria-label="Close">
+						          		<span aria-hidden="true">×</span>
+						        	</button>
+						      	</div>
+						      	<div class="modal-body">
+						      		<div class="col-12">
+							      		<div class="row">
+							      			<div class="col-12 px-sm-5 mb-5">
+							      				<div class="step py-5 border-bottom border-top">
+							      					<div class="row justify-content-center">
+							      						<div class="col-auto">
+							      							<div class="step-rect active prev"></div>
+							      						</div>
+							      						<div class="col-auto col-sm-2">
+							      							<div class="step-line active"></div>
+							      						</div>
+							      						<div class="col-auto">
+							      							<div class="step-rect active prev"></div>
+							      						</div>
+							      						<div class="col-auto col-sm-2">
+							      							<div class="step-line active"></div>
+							      						</div>
+							      						<div class="col-auto">
+							      							<div class="step-rect active"></div>
+							      						</div>
+							      					</div>
+							      				</div>
+							      			</div>
+							      			<div class="col-12 mb-5">
+							      				<h3 class="h1 text-center">BITPHOENIX TOKENS ORDER</h3>
+							      			</div>
+							      			<div class="col-12 mb-5">
+							      				<div class="row">
+							      					<div class="col-md-6 col-lg-3 text-center border-right py-4">
+							      						<div class="prod-el">
+							      							<h2 class="h1 text-primary text-weight-semibold">1000</h2> 
+							      							<p class="prod-txt">Investment amount in USD</p>
+							      						</div>
+							      					</div>
+							      					<div class="col-md-6 col-lg-3 text-center py-4">
+							      						<div class="prod-el">
+							      							<h2 class="h1 text-primary text-weight-semibold">0.335012575</h2> 
+							      							<p class="prod-txt">Investment amount in BTC</p>
+							      						</div>
+							      					</div>
+							      					<div class="col-md-6 col-lg-3 text-center border-left py-4">
+							      						<div class="prod-el">
+							      							<h2 class="h1 text-primary text-weight-semibold">900</h2> 
+							      							<p class="prod-txt">Token amount</p>
+							      						</div>
+							      					</div>
+							      					<div class="col-md-6 col-lg-3 text-center border-left py-4">
+							      						<div class="prod-el">
+							      							<h2 class="h1 text-primary text-weight-semibold">14 : 59</h2> 
+							      							<p class="prod-txt">Token amount</p>
+							      						</div>
+							      					</div>
+							      				</div>
+							      			</div>
+							     			<div class="col-12 bg-gray3 py-5 border-top">
+							      				<div class="row justify-content-center">
+							      					<div class="col-md-10 col-lg-3 mb10 mb-sm-0">
+							      						<a class="pr-btn d-block panel mb-0" href="">
+								      						<i class="fal fa-check pl20 pr-20 border-right border-right text-success"></i>
+								      						<span class="text-weight-bold pl-4">ETHERIUM</span>
+								      					</a>
+							      					</div>
+							      					<div class="col-md-10 col-lg-3 mb10 mb-sm-0">
+							      						<a class="pr-btn d-block panel mb-0" href="">
+								      						<i class="fab fa-btc  pl20 pr-20 border-right text-warning"></i>
+								      						<span class="text-weight-bold pl-4">BITCOIN</span>
+								      					</a>
+							      					</div>
+							      					<div class="col-md-10 col-lg-3 mb10 mb-sm-0">
+							      						<a class="pr-btn d-block panel mb-0" href="">
+							      							<i class="far fa-dollar-sign  pl20 pr-20 border-right text-primary"></i>
+							      							<span class="text-weight-bold pl-4">USD</span>
+							      						</a>
+							      					</div>
+							      				</div>
+							      			</div>
+							      			<div class="col-12  text-center border-top py-5">
+							      				By transfering your investment to this address you confirm that you agree to buy tokens
+						
+							      			</div>
+							      		</div>
+						      		</div>
+						      	</div>
+						    </div>
+						</div>
+		            </div>
+		            <div class="modal modal-costom fade bd-example-modal-lg" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel2" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+						    <div class="modal-content">
+						      	<div class="modal-header mx-4 mx-sm-5 px-0 border-bottom">
+						        	<button type="button" class="close mr-sm-0" data-dismiss="modal" aria-label="Close">
+						          		<span aria-hidden="true">×</span>
+						        	</button>
+						      	</div>
+						      	<div class="modal-body">
+						      		<div class="col-12">
+							      		<div class="row pt-5">
+							      			<div class="col-12 mb-5">
+							      				<h3 class="h1 text-center">BITPHOENIX TOKENS ORDER</h3>
+							      			</div>
+							      			<div class="col-12 mb-5">
+							      				<div class="row justify-content-center">
+							      					<div class="col-10 text-center">
+							      						<p class="mb-0">Ad putent suscipit duo, eos ut illum doming voluptatum, ex usu putant urbanitas consetetur. Quando impedit facilisi duo in, sed no pertinacia honestatis. Est cu albucius molestiae, mei an ubique possim.</p>
+														<p> No qui dicat ceteros maiorum, aeterno scripta quaestio his te. Ut quis voluptaria qui, ne mel quod ridens aliquam, sea nemore quaeque ne.</p>
+							      					</div>
+							      				</div>
+							      			</div>
+							      		</div>
+							      		<div class="row">
+							      			<div class="col-12">
+							      				<h3 class="h1 text-center text-uppercase">Token amount for sale</h3>
+							      			</div>
+							      			<div class="col-12">
+							      				<h3 class="text-center text-primary">You have 900 tokens</h3>
+							      			</div>
+							      		</div>
+							      		<div class="row align-items-stretch justify-content-center px-sm-3 mb-5">
+							      			<div class="col-md">
+							      				<div class="form-group mb-0">
+                                                	<input type="text" class="form-control" value="">
+                                                	<label class="above-label above-label-white">Token amount</label>
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-auto text-center pt-md-3 p-0">
+                                            	<span class="">=</span>
+                                            </div>
+											<div class="col-md">
+												<div class="form-group input-with-currency mb-0">
+                                                	<input type="text" class="form-control" value="">
+                                               	 	<span class="currency border-left-0">usd</span>
+                                               	</div>
+                                            </div>
+                                            <div class="col col-md-auto text-center pt-md-3  p-0">
+                                            	<span class="">=</span>
+                                            </div>
+                                            <div class="col-md">
+                                            	<div class="form-group input-with-currency mb-0">
+                                                	<input type="text" class="form-control" value="">
+                                                	<span class="currency border-left-0">btc</span>
+                                                </div>
+                                            </div>
+                                        </div>
+							      		<div class="row mb-5 justify-content-md-end px-sm-4">
+							      			<div class="col-12 col-md-6 col-lg-5">
+							      				<div class="d-flex justify-content-between py-4 border-bottom border-dashed-bottom">
+							      					<span>Fee 0.1% (USD)</span>
+							      					<span>0.1</span>
+							      				</div>
+							      				<div class="d-flex justify-content-between py-4 border-bottom border-dashed-bottom">
+							      					<span class="text-weight-semibold">Total (USD)</span>
+							      					<span class="text-weight-semibold">99.9</span>
+							      				</div>
+							      			</div>
+							      		</div>
+							      		<div class="row px-sm-4">							      			
+                                           	<div class="col py-4 border-top text-center mx-4 mx-sm-4">
+							      				<a class="btn btn-success" href="">Sell <i class="fal fa-arrow-right pl-2"></i></a>
+							      			</div>
+							      		</div>
+							      	</div>
+							    </div>
+							      	</div>
+							      </div>
+						      	</div>
+						    </div>
+						</div>
+		            </div>
+                </div>
+						<footer>
+						    <div class="container-fluid">
+						        <div class="row">
+						            <div class="col">
+						                <span>Created for Marketpeak - <a href="#" class="text-weight-regular">Zendo.cloud</a></span>
+						            </div>
+						        </div>
+						    </div>
+						</footer>
+        </div>
+		</div>
+    </div>
+	<!-- Basic js -->
+	<script src="./assets/js/jquery-3.3.1.min.js"></script>
+	<script src="./assets/js/bootstrap.bundle.min.js"></script>
+	<!-- mCustomScrollbar -->
+	<script src="./assets/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!-- Select2 -->
+	<script src="./assets/plugins/select2/select2.min.js"></script>
+	<!-- Toasters -->
+	<script src="./assets/plugins/toastr/toastr.min.js"></script>
+	<!-- DataTables -->
+	<script src="./assets/plugins/datatables/datatables.min.js"></script>
+	<!-- Main js -->
+	<script src="./assets/js/script.js"></script>>
+    <script src="./assets/plugins/echarts/echarts.min.js"></script>
+    <script src="./assets/demo/js/line.js"></script>
+</body>
+</html>

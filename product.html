@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link rel="shortcut icon" href="./assets/demo/img/favicon.png">
+	<title>Markeatpeak - <?=$pageTitle;?></title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- Fonts -->
+	<link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/all.css">
+	<link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/v4-shims.min.css">
+	<!-- Scrollbar -->
+	<link rel="stylesheet" type="text/css" href="./assets/plugins/scrollbar/jquery.mCustomScrollbar.min.css">
+	<!-- Select2 -->
+	<link rel="stylesheet" type="text/css" href="./assets/plugins/select2/select2.min.css">
+	<!-- Toasters -->
+	<link rel="stylesheet" type="text/css" href="./assets/plugins/toastr/toastr.min.css">
+	<!-- DataTables -->
+	<link rel="stylesheet" type="text/css" href="./assets/plugins/datatables/datatables.min.css">
+	<!-- Main css -->
+	<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/demo/css/view_d3js.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<!-- <body class="sidebar-minimize"> -->
+<body>
+    <div class="page-container">
+				<div id="mainSidebar" class="sidebar-main">
+				    <div class="sidebar-header">
+				        <a class="sidebar-brand" href="#">
+				            <img src="./assets/demo/img/logo.png"><span class="text-blue">Market</span><span>Peak</span>
+				        </a>
+				    </div>
+				    <ul class="navigation">
+				        <li class="navigation-header">
+				            <span>Pages</span>
+				        </li>
+				        <li class="active">
+				            <a href="/dashboard.php">
+				                <i class="fal fa-tachometer"></i>
+				                <span>Dashboard</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-list-ul"></i>
+				                <span>ICO projects</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-dollar-sign"></i>
+				                <span>Investments</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-chart-bar"></i>
+				                <span>Marketing</span>
+				            </a>
+				            <ul>
+				                <li>
+				                    <a href="#">
+				                        <i class="fal fa-chart-line"></i>
+				                        <span>Promotion</span>
+				                    </a>
+				                </li>
+				                <li>
+				                    <a href="#">
+				                        <i class="fal fa-folder-minus"></i>
+				                        <span>Materials</span>
+				                    </a>
+				                </li>
+				                <li>
+				                    <a href="#">
+				                        <i class="fal fa-file-invoice-dollar"></i>
+				                        <span>Compensation plan</span>
+				                    </a>
+				                </li>
+				                <li>
+				                    <a href="#">
+				                        <i class="fal fa-browser"></i>
+				                        <span>Menu level 2</span>
+				                    </a>
+				                    <ul>
+				                        <li>
+				                            <a href="#">
+				                                <i class="fab fa-internet-explorer"></i>
+				                                <span>IExplorer</span>
+				                            </a>
+				                        </li>
+				                        <li>
+				                            <a href="#">
+				                                <i class="fab fa-chrome"></i>
+				                                <span>Google Chrome</span>
+				                            </a>
+				                        </li>
+				                        <li>
+				                            <a href="#">
+				                                <i class="fab fa-firefox"></i>
+				                                <span>Mozilla Firefox</span>
+				                            </a>
+				                        </li>
+				                    </ul>
+				                </li>
+				            </ul>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-share-alt"></i>
+				                <span>Network</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-calculator-alt"></i>
+				                <span>Finance</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-envelope-open"></i>
+				                <span>Messages</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-shopping-cart"></i>
+				                <span>Products</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-newspaper"></i>
+				                <span>News</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-question-circle"></i>
+				                <span>FAQ</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-headset"></i>
+				                <span>Help</span>
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#">
+				                <i class="fal fa-cog"></i>
+				                <span>Admin panel</span>
+				            </a>
+				        </li>
+				    </ul>
+				    <span class="close-sidebar-main toggle-sidebar-main_js"></span>
+				</div>
+        <div class="content-wrapper">
+            <header class="page-header">
+						    <div class="left-side">
+						        <a class="toggle-sidebar-main toggle-sidebar-main_js"><span></span></a>
+						        <ul class="breadcrumbs">
+						            <li><a href="#">Main</a></li>
+						            <li><?=$pageTitle;?></li>
+						        </ul>
+						    </div>
+						    <div class="right-side">
+						        <div class="referal-link">
+						            <input type="text" value="http://admin.marketpeak">
+						            <a id="linkReferalButton" href="#"><i class="fal fa-copy"></i></a>
+						        </div>
+						        <div class="dropdown lang-menu">
+						            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						                EN
+						                <i class="fas fa-caret-down"></i>
+						            </a>
+						            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						                <a class="dropdown-item" href="#">
+						                    <img src="./assets/demo/img/ru.jpg" alt="Russia">
+						                    Russian
+						                </a>
+						                <a class="dropdown-item" href="#">
+						                    <img src="./assets/demo/img/en.jpg" alt="Russia">
+						                    English
+						                </a>
+						                <a class="dropdown-item" href="#">
+						                    <img src="./assets/demo/img/sp.jpg" alt="Russia">
+						                    Spanish
+						                </a>
+						            </div>
+						        </div>
+						        <div class="dropdown user-menu">
+						            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						                Konstantin
+						                <i class="fas fa-caret-down"></i>
+						                <img src="./assets/demo/img/user.jpg" class="avatar-user">
+						            </a>
+						            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+						                <a class="dropdown-item" href="#">
+						                    <i class="fal fa-user"></i>
+						                    Profile
+						                </a>
+						                <a class="dropdown-item" href="#">
+						                    <i class="fal fa-sign-out"></i>
+						                    Logout
+						                </a>
+						            </div>
+						        </div>
+						    </div>
+						</header>
+            <div class="main-wrapper">
+                <div class="container-fluid">
+                	<div class="row">
+						<div class="col-12 col-xl-12">	
+		                    <ul class="nav nav-pills nav-pills-tranparent mx-0 px-0" id="pills-tab" role="tablist">
+		                        <li class="nav-item">
+		                          <a class="nav-link active" id="pills-personal-tab" data-toggle="pill" href="#pills-personal" role="tab" aria-controls="pills-personal" aria-selected="true">All products</a>
+		                        </li>
+		                        <li class="nav-item">
+		                          <a class="nav-link" id="pills-dinamic-tab" data-toggle="pill" href="#pills-dinamic" role="tab" aria-controls="pills-dinamic" aria-selected="false">Trading</span></a>
+		                        </li>
+		                       	<li class="nav-item">
+		                          <a class="nav-link" id="pills-personal-tab" data-toggle="pill" href="#pills-personal" role="tab" aria-controls="pills-personal" aria-selected="true">Hardware</a>
+		                        </li>
+		                       	<li class="nav-item">
+		                          <a class="nav-link" id="pills-personal-tab" data-toggle="pill" href="#pills-personal" role="tab" aria-controls="pills-personal" aria-selected="true">Mining</a>
+		                        </li>
+		                    </ul>
+		                    <div class="tab-content py-5 px-0" id="pills-tabContent">
+		                        <div class="tab-pane fade show active" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
+		                        	<div class="col-12 p-0">
+		                        		<div class="row">
+				                        	<div class=" col-md-6 col-lg-6 col-xl-auto">
+						                		<div class="pr-el panel">
+							                		<div class="panel-body set-height-1_js">
+							                			<div class="pr-el-img text-center mb-4">
+							                				<img src="./assets/demo/img/product.png" alt="prod">
+							                			</div>
+							                			<h3 class="text-weight-semibold text-uppercase text-center mb-4">BitPhoenix token</h3>
+							                			<div class="pr-el-prices d-flex justify-content-center align-items-center mb-4">
+							                				<div class="text-weight-semibold text-primary">1 BPX</div>
+							                				<div class="pr-el-prices-equally rounded-circle text-white bg-primary text-weight-semibold mx-3 mx-md-5">  =  </div>
+							                				<div class="text-gray2"> $ 0.12 </div>
+							                			</div>
+							                			<div class="row no-gutters justify-content-center pt-4 border-top">
+							                				<div class="col-auto flex-grow-1 text-center border-right">
+									                			<a class="btn btn-costom btn-green" href="">
+									                				<i class="fal fa-cart-plus mr-3"></i>
+									                				Buy
+									                			</a>
+									                		</div>
+									                		<div class="col-auto flex-grow-1 text-center">
+									                			<a class="btn btn-costom btn-red" href="">
+									                				<i class="fal fa-arrow-up mr-3"></i></i>
+									                				Sell
+									                			</a>
+							                				</div>
+							                			</div>
+							                		</div>
+							                	</div>
+							        		</div>
+							        		<div class=" col-md-6 col-lg-6 col-xl-auto">
+							        			<div class="pr-el pr-el--coming panel s">
+							        				<div class="panel-body set-height-1_js">
+							        					<div class="pr-el-img text-center mb-4">
+							        						<img src="./assets/demo/img/product.png" alt="prod">
+							        					</div>
+							        					<h3 class="text-weight-semibold text-uppercase text-center mb-4">BitPhoenix token</h3>
+							        					<div class="pr-el-prices d-flex justify-content-center align-items-center mb-4">
+							        						<div class="pr-el-prices pr-el-prices--coming text-weight-semibold text-primary"></div>
+							        						<div class="pr-el-prices-equally rounded-circle text-white bg-primary text-weight-semibold mx-3 mx-md-5"></div>
+							        						<div class="pr-el-prices pr-el-prices--coming"></div>
+							        					</div>
+							        					<div class="row no-gutters border-top text-center pt30">
+							        						<div class="col-12 h3 m-0 text-gray2 text-uppercase text-weight-regular">Coming soon</div>	
+							        					</div>
+							        				</div>
+							        			</div>
+							        		</div>
+				                        </div>
+				                    </div>
+				                </div>
+		                        <div class="tab-pane fade" id="pills-dinamic" role="tabpanel" aria-labelledby="pills-dinamic-tab">
+		                        	<div class="col-12 p-0">
+		                        		<div class="row">
+				                        	<div class=" col-md-6 col-lg-6 col-xl-auto">
+						                		<div class="pr-el panel">
+							                		<div class="panel-body set-height-1_js">
+							                			<div class="pr-el-img text-center mb-4">
+							                				<img src="./assets/demo/img/product.png" alt="prod">
+							                			</div>
+							                			<h3 class="text-weight-semibold text-uppercase text-center mb-4">BitPhoenix token</h3>
+							                			<div class="pr-el-prices d-flex justify-content-center align-items-center mb-4">
+							                				<div class="text-weight-semibold text-primary">1 BPX</div>
+							                				<div class="pr-el-prices-equally rounded-circle text-white bg-primary text-weight-semibold mx-3 mx-md-5">  =  </div>
+							                				<div class="text-gray2"> $ 0.12 </div>
+							                			</div>
+							                			<div class="row no-gutters justify-content-center pt-4 border-top">
+							                				<div class="col-auto flex-grow-1 text-center border-right">
+									                			<a class="btn btn-costom btn-green" href="">
+									                				<i class="fal fa-cart-plus mr-3"></i>
+									                				Buy
+									                			</a>
+									                		</div>
+									                		<div class="col-auto flex-grow-1 text-center">
+									                			<a class="btn btn-costom btn-red" href="">
+									                				<i class="fal fa-arrow-up mr-3"></i></i>
+									                				Sell
+									                			</a>
+							                				</div>
+							                			</div>
+							                		</div>
+							                	</div>
+							        		</div>
+							        		<div class=" col-md-6 col-lg-6 col-xl-auto">
+							        			<div class="pr-el pr-el--coming panel s">
+							        				<div class="panel-body set-height-1_js">
+							        					<div class="pr-el-img text-center mb-4">
+							        						<img src="./assets/demo/img/product.png" alt="prod">
+							        					</div>
+							        					<h3 class="text-weight-semibold text-uppercase text-center mb-4">BitPhoenix token</h3>
+							        					<div class="pr-el-prices d-flex justify-content-center align-items-center mb-4">
+							        						<div class="pr-el-prices pr-el-prices--coming text-weight-semibold text-primary"></div>
+							        						<div class="pr-el-prices-equally rounded-circle text-white bg-primary text-weight-semibold mx-3 mx-md-5"></div>
+							        						<div class="pr-el-prices pr-el-prices--coming"></div>
+							        					</div>
+							        					<div class="row no-gutters border-top text-center pt30">
+							        						<div class="col-12 h3 m-0 text-gray2 text-uppercase text-weight-regular">Coming soon</div>	
+							        					</div>
+							        				</div>
+							        			</div>
+							        		</div>
+				                        </div>
+				                    </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            </div>
+		        </div>
+            </div>
+        </div>
+					<footer>
+					    <div class="container-fluid">
+					        <div class="row">
+					            <div class="col">
+					                <span>Created for Marketpeak - <a href="#" class="text-weight-regular">Zendo.cloud</a></span>
+					            </div>
+					        </div>
+					    </div>
+					</footer>
+        </div>
+		</div>
+    </div>
+		<!-- Basic js -->
+		<script src="./assets/js/jquery-3.3.1.min.js"></script>
+		<script src="./assets/js/bootstrap.bundle.min.js"></script>
+		<!-- mCustomScrollbar -->
+		<script src="./assets/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+		<!-- Select2 -->
+		<script src="./assets/plugins/select2/select2.min.js"></script>
+		<!-- Toasters -->
+		<script src="./assets/plugins/toastr/toastr.min.js"></script>
+		<!-- DataTables -->
+		<script src="./assets/plugins/datatables/datatables.min.js"></script>
+		<!-- Main js -->
+		<script src="./assets/js/script.js"></script>
+    <script src="./assets/plugins/echarts/echarts.min.js"></script>
+    <script src="./assets/demo/js/line.js"></script>
+</body>
+</html>

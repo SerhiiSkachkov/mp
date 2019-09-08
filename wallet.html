@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="shortcut icon" href="./assets/demo/img/favicon.png">
+    <title>Markeatpeak - <?=$pageTitle;?></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/v4-shims.min.css">
+    <!-- Scrollbar -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/select2/select2.min.css">
+    <!-- Toasters -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/toastr/toastr.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/datatables/datatables.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/demo/css/view_d3js.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<!-- <body class="sidebar-minimize"> -->
+<body>
+    <div class="page-container">
+        <? include('./layouts/sidebar.php'); ?>
+        <div class="content-wrapper">
+            <? include('./layouts/header.php'); ?>
+            <div class="main-wrapper">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="panel panel-fat">
+                                <div class="panel-body">
+                                    <div class="row wallet-list">
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="wallet-content wallet-etheteum">
+                                                <img class="wallet-content-icon" src="./assets/img/wallet/eth2.png">
+                                                <div class="wallet-info">
+                                                    <p class="current-balance">128.00&nbsp;eth</p>
+                                                    <p class="wallet-name">Current Ethereum wallet</p>
+                                                    <p>Expect output: <span class="out-balance">752.17&nbsp;eth</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="wallet-content wallet-bitcoin">
+                                                <img class="wallet-content-icon" src="./assets/img/wallet/btc2.png">
+                                                <div class="wallet-info">
+                                                    <p class="current-balance">128.00&nbsp;btc</p>
+                                                    <p class="wallet-name">Current Bitcoin wallet</p>
+                                                    <p>Expect output: <span class="out-balance">752.17&nbsp;btc</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="wallet-content wallet-usd">
+                                                <img class="wallet-content-icon" src="./assets/img/wallet/usd2.png">
+                                                <div class="wallet-info">
+                                                    <p class="current-balance">128.00&nbsp;usd</p>
+                                                    <p class="wallet-name">Current USD wallet</p>
+                                                    <p>Expect output: <span class="out-balance">752.17&nbsp;usd</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="wallet-content wallet-etheteum inactive">
+                                                <img class="wallet-content-icon" src="./assets/img/wallet/eth2.png">
+                                                <div class="wallet-info">
+                                                    <p class="current-balance">128.00&nbsp;eth</p>
+                                                    <p class="wallet-name">Current Ethereum wallet</p>
+                                                    <p>Expect output: <span class="out-balance">752.17&nbsp;eth</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="wallet-content wallet-bitcoin inactive">
+                                                <img class="wallet-content-icon" src="./assets/img/wallet/btc2.png">
+                                                <div class="wallet-info">
+                                                    <p class="current-balance">128.00&nbsp;btc</p>
+                                                    <p class="wallet-name">Current Bitcoin wallet</p>
+                                                    <p>Expect output: <span class="out-balance">752.17&nbsp;btc</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="wallet-content wallet-usd inactive">
+                                                <img class="wallet-content-icon" src="./assets/img/wallet/usd2.png">
+                                                <div class="wallet-info">
+                                                    <p class="current-balance">128.00&nbsp;usd</p>
+                                                    <p class="wallet-name">Current USD wallet</p>
+                                                    <p>Expect output: <span class="out-balance">752.17&nbsp;usd</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="btn-group justify-content-around justify-content-md-start separate">
+                                                <a href="#" class="btn btn-primary text-weight-medium flex-grow-1 flex-md-grow-0 px-5"><i class="fal fa-arrow-down"></i>Introduce</a>
+                                                <a href="#" class="btn btn-primary text-weight-medium flex-grow-1 flex-md-grow-0 px-5"><i class="fal fa-exchange"></i>Transfer</a>
+                                                <a href="#" class="btn btn-primary text-weight-medium flex-grow-1 flex-md-grow-0 px-5"><i class="fal fa-arrow-up"></i>Withdraw</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="panel panel-fat">
+                                <div class="panel-body">
+                                    <h5 class="text-weight-medium">My finance</h5>
+                                    <hr class="mb35">
+                                    <div class="table-responsive mb30">
+                                        <table class="table js-data-table">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th>№</th>
+                                                    <th>Date</th>
+                                                    <th>Operation</th>
+                                                    <th>Amount ($)</th>
+                                                    <th>Balance ($)</th>
+                                                    <th>Wallet</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>
+                                                        03/02/2016<br>
+                                                        22:16:41
+                                                    </td>
+                                                    <td class="name-transaction">Major financial consulting company McKinsey & Company believes that there is little evidence of practical</td>
+                                                    <td>12 000</td>
+                                                    <td>12 000</td>
+                                                    <td class="text-uppercase">USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>
+                                                        03/02/2016<br>
+                                                        22:16:41
+                                                    </td>
+                                                    <td class="name-transaction">Major financial consulting company McKinsey & Company believes that there is little evidence of practical</td>
+                                                    <td>12 000</td>
+                                                    <td>12 000</td>
+                                                    <td class="text-uppercase">USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>
+                                                        03/02/2016<br>
+                                                        22:16:41
+                                                    </td>
+                                                    <td class="name-transaction">Major financial consulting company McKinsey & Company believes that there is little evidence of practical</td>
+                                                    <td>12 000</td>
+                                                    <td>12 000</td>
+                                                    <td class="text-uppercase">USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>
+                                                        03/02/2016<br>
+                                                        22:16:41
+                                                    </td>
+                                                    <td class="name-transaction">Major financial consulting company McKinsey & Company believes that there is little evidence of practical</td>
+                                                    <td>12 000</td>
+                                                    <td>12 000</td>
+                                                    <td class="text-uppercase">USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>
+                                                        03/02/2016<br>
+                                                        22:16:41
+                                                    </td>
+                                                    <td class="name-transaction">Major financial consulting company McKinsey & Company believes that there is little evidence of practical</td>
+                                                    <td>12 000</td>
+                                                    <td>12 000</td>
+                                                    <td class="text-uppercase">USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>
+                                                        03/02/2016<br>
+                                                        22:16:41
+                                                    </td>
+                                                    <td class="name-transaction">Major financial consulting company McKinsey & Company believes that there is little evidence of practical</td>
+                                                    <td>12 000</td>
+                                                    <td>12 000</td>
+                                                    <td class="text-uppercase">USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>
+                                                        03/02/2016<br>
+                                                        22:16:41
+                                                    </td>
+                                                    <td class="name-transaction">Major financial consulting company McKinsey & Company believes that there is little evidence of practical</td>
+                                                    <td>12 000</td>
+                                                    <td>12 000</td>
+                                                    <td class="text-uppercase">USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                        03/02/2016<br>
+                                                        22:16:41
+                                                    </td>
+                                                    <td class="name-transaction">Major financial consulting company McKinsey & Company believes that there is little evidence of practical</td>
+                                                    <td>12 000</td>
+                                                    <td>12 000</td>
+                                                    <td class="text-uppercase">USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>
+                                                        03/02/2016<br>
+                                                        22:16:41
+                                                    </td>
+                                                    <td class="name-transaction">Major financial consulting company McKinsey & Company believes that there is little evidence of practical</td>
+                                                    <td>12 000</td>
+                                                    <td>12 000</td>
+                                                    <td class="text-uppercase">USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>
+                                                        03/02/2016<br>
+                                                        22:16:41
+                                                    </td>
+                                                    <td class="name-transaction">Major financial consulting company McKinsey & Company believes that there is little evidence of practical</td>
+                                                    <td>12 000</td>
+                                                    <td>12 000</td>
+                                                    <td class="text-uppercase">USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11</td>
+                                                    <td>
+                                                        03/02/2016<br>
+                                                        22:16:41
+                                                    </td>
+                                                    <td class="name-transaction">Major financial consulting company McKinsey & Company believes that there is little evidence of practical</td>
+                                                    <td>12 000</td>
+                                                    <td>12 000</td>
+                                                    <td class="text-uppercase">USD</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <ul class="pagination justify-content-end" id="yw0">
+                                        <li class="first hidden">
+                                            <a href="/officewallets/transactions/index/wallet/81/page/1/?">
+                                                <i class="far fa-chevron-double-left"></i>
+                                            </a>
+                                        </li>
+                                        <li class="previous hidden">
+                                            <a href="/officewallets/transactions/index/wallet/81/page/1/?">
+                                                <i class="far fa-chevron-left"></i>
+                                            </a>
+                                        </li>
+                                        <li class="page active">
+                                            <a href="/officewallets/transactions/index/wallet/81/page/1/?">1</a>
+                                        </li>
+                                        <li class="page">
+                                            <a href="/officewallets/transactions/index/wallet/81/page/2/?">2</a>
+                                        </li>
+                                        <li class="next">
+                                            <a href="/officewallets/transactions/index/wallet/81/page/2/?">
+                                                <i class="far fa-chevron-right"></i>
+                                            </a>
+                                        </li>
+                                        <li class="last">
+                                            <a href="/officewallets/transactions/index/wallet/81/page/2/?">
+                                                <i class="far fa-chevron-double-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <span>Created for Marketpeak - <a href="#" class="text-weight-regular">Zendo.cloud</a></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- Basic js -->
+    <script src="./assets/js/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- mCustomScrollbar -->
+    <script src="./assets/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Select2 -->
+    <script src="./assets/plugins/select2/select2.min.js"></script>
+    <!-- Toasters -->
+    <script src="./assets/plugins/toastr/toastr.min.js"></script>
+    <!-- DataTables -->
+    <script src="./assets/plugins/datatables/datatables.min.js"></script>
+    <!-- Main js -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

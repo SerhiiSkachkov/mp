@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="shortcut icon" href="./assets/demo/img/favicon.png">
+    <title>Markeatpeak - <?=$pageTitle;?></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome/css/v4-shims.min.css">
+    <!-- Scrollbar -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/select2/select2.min.css">
+    <!-- Toasters -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/toastr/toastr.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="./assets/plugins/datatables/datatables.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/demo/css/view_d3js.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<!-- <body class="sidebar-minimize"> -->
+<body>
+    <div class="page-container">
+        <div id="mainSidebar" class="sidebar-main">
+            <div class="sidebar-header">
+                <a class="sidebar-brand" href="#">
+                    <img src="./assets/demo/img/logo.png"><span class="text-blue">Market</span><span>Peak</span>
+                </a>
+            </div>
+            <ul class="navigation">
+                <li class="navigation-header">
+                    <span>Pages</span>
+                </li>
+                <li class="active">
+                    <a href="/dashboard.php">
+                        <i class="fal fa-tachometer"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-list-ul"></i>
+                        <span>ICO projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-dollar-sign"></i>
+                        <span>Investments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-chart-bar"></i>
+                        <span>Marketing</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-chart-line"></i>
+                                <span>Promotion</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-folder-minus"></i>
+                                <span>Materials</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-file-invoice-dollar"></i>
+                                <span>Compensation plan</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-browser"></i>
+                                <span>Menu level 2</span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-internet-explorer"></i>
+                                        <span>IExplorer</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-chrome"></i>
+                                        <span>Google Chrome</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-firefox"></i>
+                                        <span>Mozilla Firefox</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-share-alt"></i>
+                        <span>Network</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-calculator-alt"></i>
+                        <span>Finance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-envelope-open"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-shopping-cart"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-newspaper"></i>
+                        <span>News</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-headset"></i>
+                        <span>Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fal fa-cog"></i>
+                        <span>Admin panel</span>
+                    </a>
+                </li>
+            </ul>
+            <span class="close-sidebar-main toggle-sidebar-main_js"></span>
+        </div>
+        <div class="content-wrapper">
+            <header class="page-header">
+                <div class="left-side">
+                    <a class="toggle-sidebar-main toggle-sidebar-main_js"><span></span></a>
+                    <ul class="breadcrumbs">
+                        <li><a href="#">Main</a></li>
+                        <li><?=$pageTitle;?></li>
+                    </ul>
+                </div>
+                <div class="right-side">
+                    <div class="referal-link">
+                        <input type="text" value="http://admin.marketpeak">
+                        <a id="linkReferalButton" href="#"><i class="fal fa-copy"></i></a>
+                    </div>
+                    <div class="dropdown lang-menu">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            EN
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">
+                                <img src="./assets/demo/img/ru.jpg" alt="Russia">
+                                Russian
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./assets/demo/img/en.jpg" alt="Russia">
+                                English
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./assets/demo/img/sp.jpg" alt="Russia">
+                                Spanish
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown user-menu">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Konstantin
+                            <i class="fas fa-caret-down"></i>
+                            <img src="./assets/demo/img/user.jpg" class="avatar-user">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">
+                                <i class="fal fa-user"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fal fa-sign-out"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="container-fluid">
+
+                    <ul class="nav nav-tabs-messages" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link primary active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">New message</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Incoming messages <div class="badge-primary">4</div></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Outgoing messages</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content-messages" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                            <div class="container-fluid pd-30 pb-10">
+                                <form>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">To</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control select2">
+                                                <option>Fo user</option>
+                                                <option>User</option>
+                                                <option>User</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label"></label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control select2">
+                                                <option disabled selected>Select user</option>
+                                                <option>User</option>
+                                                <option>User</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Topic</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" value="Message topic">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Text</label>
+                                        <div class="col-sm-10">
+                                            <textarea class="form-control" rows="8">Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</textarea>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <hr>
+
+                                <div class="row message-controls pt-10 pb-10">
+                                    <div class="col-sm-6">
+                                        <a href="#" class="btn btn-success"><i class="fal fa-paper-plane"></i></i>Send</a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="#" class="btn btn-danger"><i class="fal fa-times"></i>Cancel</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                            <div class="message-control-panel">
+                                <div class="message-selector">
+                                    <i class="far fa-square"></i>
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="fx-grow"></div>
+                                <div class="message-search">
+                                    <div class="ms-container">
+                                        <input type="text" value="Search by mail...">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                                <div class="message-pages">
+                                    <div class="message-pages-count">
+                                        <span id="mpc-from">1</span> - <span id="mpc-to">4</span> из <span id="mpc-total">1</span>
+                                        <div class="mpc-button"><i class="far fa-chevron-left"></i></div>
+                                        <div class="mpc-button"><i class="far fa-chevron-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="message-list">
+                                <li class="message-item unread">
+                                    <div class="message-selector">
+                                        <i class="far fa-square"></i>
+                                    </div>
+                                    <div class="message-selector message-star">     
+                                        <div class="favstar">
+                                            <i class="fal fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="message-sender">
+                                        Oleg Stanislavov
+                                    </div>
+                                    <div class="message-content fx-grow">
+                                        <div class="message-topic">Weekly magazine: How to argue in English</div>
+                                        <div class="message-separator"> - </div>
+                                        <div class="message-body fx-grow">We prepared curated Christmas graphics for you and also the best price and i assume the message cuts off somewhere here</div>
+                                    </div>
+                                    <div class="message-date">
+                                        14 dec.
+                                    </div>
+                                </li>
+                                <li class="message-item unread">
+                                    <div class="message-selector">
+                                        <i class="far fa-square"></i>
+                                    </div>
+                                    <div class="message-selector message-star">
+                                        <div class="favstar active">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="message-sender">
+                                        Anastasia Kolesnikova
+                                    </div>
+                                    <div class="message-content fx-grow">
+                                        <div class="message-topic">Weekly magazine: How to argue in English</div>
+                                        <div class="message-separator"> - </div>
+                                        <div class="message-body fx-grow">We prepared curated Christmas graphics for you and also the best price and i assume the message cuts off somewhere here</div>
+                                    </div>
+                                    <div class="message-date">
+                                        14 dec.
+                                    </div>
+                                </li>
+                                <li class="message-item">
+                                    <div class="message-selector">
+                                        <i class="far fa-square"></i>
+                                    </div>
+                                    <div class="message-selector message-star">
+                                        <div class="favstar">
+                                            <i class="fal fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="message-sender">
+                                        Karetina Efrosineva
+                                    </div>
+                                    <div class="message-content fx-grow">
+                                        <div class="message-topic">Weekly magazine: How to argue in English</div>
+                                        <div class="message-separator"> - </div>
+                                        <div class="message-body fx-grow">We prepared curated Christmas graphics for you and also the best price and i assume the message cuts off somewhere here</div>
+                                    </div>
+                                    <div class="message-date">
+                                        14 dec.
+                                    </div>
+                                </li>
+                                <li class="message-item">
+                                    <div class="message-selector">
+                                        <i class="far fa-square"></i>
+                                    </div>
+                                    <div class="message-selector message-star">
+                                        <div class="favstar">
+                                            <i class="fal fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="message-sender">
+                                        Stanislav Starshov
+                                    </div>
+                                    <div class="message-content fx-grow">
+                                        <div class="message-topic">Weekly magazine: How to argue in English</div>
+                                        <div class="message-separator"> - </div>
+                                        <div class="message-body fx-grow">We prepared curated Christmas graphics for you and also the best price and i assume the message cuts off somewhere here</div>
+                                    </div>
+                                    <div class="message-date">
+                                        14 dec.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                            <div class="message-control-panel">
+                                <div class="message-selector">
+                                    <i class="far fa-square"></i>
+                                </div>
+                                <div class="fx-grow"></div>
+                                <div class="message-search">
+                                    <div class="ms-container">
+                                        <input type="text" value="Search by mail...">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                                <div class="message-pages">
+                                    <div class="message-pages-count">
+                                        <span id="mpc-from">1</span> - <span id="mpc-to">4</span> из <span id="mpc-total">1</span>
+                                        <div class="mpc-button"><i class="far fa-chevron-left"></i></div>
+                                        <div class="mpc-button"><i class="far fa-chevron-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="message-list">
+                                <li class="message-item unread">
+                                    <div class="message-selector">
+                                        <i class="far fa-square"></i>
+                                    </div>
+                                    <div class="message-selector message-star">     
+                                        <div class="favstar">
+                                            <i class="fal fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="message-sender">
+                                        To: Oleg Stanislavov
+                                    </div>
+                                    <div class="message-content fx-grow">
+                                        <div class="message-topic">Weekly magazine: How to argue in English</div>
+                                        <div class="message-separator"> - </div>
+                                        <div class="message-body fx-grow">We prepared curated Christmas graphics for you and also the best price and i assume the message cuts off somewhere here</div>
+                                    </div>
+                                    <div class="message-date">
+                                        14 dec.
+                                    </div>
+                                </li>
+                                <li class="message-item unread">
+                                    <div class="message-selector">
+                                        <i class="fas fa-square"></i>
+                                        <div class="check-overlay">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                    </div>
+                                    <div class="message-selector message-star">
+                                        <div class="favstar">
+                                            <i class="fal fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="message-sender">
+                                        To: Anastasia Kolesnikova
+                                    </div>
+                                    <div class="message-content fx-grow">
+                                        <div class="message-topic">Weekly magazine: How to argue in English</div>
+                                        <div class="message-separator"></div>
+                                        <div class="message-body fx-grow"></div>
+                                    </div>
+                                    <div class="message-date">
+                                        14 dec.
+                                    </div>
+                                </li>
+                                <li class="message-item">
+                                    <div class="message-selector">
+                                        <i class="far fa-square"></i>
+                                    </div>
+                                    <div class="message-selector message-star">
+                                        <div class="favstar active">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="message-sender">
+                                        To: Karetina Efrosineva
+                                    </div>
+                                    <div class="message-content fx-grow">
+                                        <div class="message-topic">(without topic)</div>
+                                        <div class="message-separator"></div>
+                                        <div class="message-body fx-grow"></div>
+                                    </div>
+                                    <div class="message-date">
+                                        14 dec.
+                                    </div>
+                                </li>
+                                <li class="message-item">
+                                    <div class="message-selector">
+                                        <i class="fas fa-square"></i>
+                                        <div class="check-overlay">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                    </div>
+                                    <div class="message-selector message-star">
+                                        <div class="favstar">
+                                            <i class="fal fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="message-sender">
+                                        To: Stanislav Starshov
+                                    </div>
+                                    <div class="message-content fx-grow">
+                                        <div class="message-topic">Weekly magazine: How to argue in English</div>
+                                        <div class="message-separator"> - </div>
+                                        <div class="message-body fx-grow">We prepared curated Christmas graphics for you and also the best price and i assume the message cuts off somewhere here</div>
+                                    </div>
+                                    <div class="message-date">
+                                        14 dec.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <span>Created for Marketpeak - <a href="#" class="text-weight-regular">Zendo.cloud</a></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+<!-- Basic js -->
+<script src="./assets/js/jquery-3.3.1.min.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<!-- mCustomScrollbar -->
+<script src="./assets/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- Select2 -->
+<script src="./assets/plugins/select2/select2.min.js"></script>
+<!-- Toasters -->
+<script src="./assets/plugins/toastr/toastr.min.js"></script>
+<!-- DataTables -->
+<script src="./assets/plugins/datatables/datatables.min.js"></script>
+<!-- Main js -->
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
